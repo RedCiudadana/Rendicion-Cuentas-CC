@@ -44,7 +44,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    // here you can enable a production-specific feature
+    ENV.baseURL = '/Rendicion-Cuentas-CC/';
+    ENV.locationType = 'none';
   }
 
   return ENV;
