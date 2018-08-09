@@ -2357,23 +2357,25 @@
         {{!-- Boot Modal --}}
         <div class="modal fade fill-in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="false">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-            <i class="pg-close"></i>
+            <i class="pg-close" style="font-size: 32px;"></i>
         </button>
-        <div class="modal-dialog ">
+        <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="text-left p-b-5"><span class="semi-bold">News letter</span> signup</h5>
-                </div>
-                <div class="modal-body">
+                <div class="modal-body padding-70">
                     <div class="row">
-                        <div class="col-md-9">
-                            <input type="text" placeholder="Your email address here" class="form-control input-lg" id="icon-filter" name="icon-filter">
+                        <div class="col-md-4">
+                          <h1 class="bold text-white">Plataforma de Justicia Abierta</h1>
+                          <p>Esta plataforma detalla el trabajo y las actividades desarrolladas durante los primeros treinta días de haber asumido la presidencia de este Tribunal e informa sobre los esfuerzos dirigidos a cumplir cada uno de los objetivos trazados en el Plan de Trabajo, periodo 2018-2019, y el Plan Estratégico Quinquenal de la Corte de Constitucionalidad. Para tal efecto, el presente informe consta de siete componentes estructurados conforme al funcionamiento y organización de la Corte de Constitucionalidad.</p>
+                          <a class="custom-close"><button class="btn btn-primary-outline btn-rounded">Ingresar</button></a>
                         </div>
-                        <div class="col-md-3 text-center">
-                            <button type="button" class="btn btn-primary btn-lg btn-large fs-15">Sign up</button>
+                        <div class="col-md-8">
+                          <video controls style="width: 100%; margin-top: 50px;">
+                            <source src="movie.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                          Your browser does not support the video tag.
+                          </video>
                         </div>
                     </div>
-                    <p class="text-right hinted-text p-t-10 p-r-10">What is it ? Terms and conditions</p>
                 </div>
                 <div class="modal-footer">
 
@@ -2386,25 +2388,24 @@
       </div>
     </div>
 
-    {{!-- BEGIN VENDOR JS --}}
-    <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
     <script src="assets/plugins/popper/umd/popper.min.js" type="text/javascript"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
-    <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-    {{!-- call start modal --}}
-    <script type="text/javascript">
-      $.when( $.ready ).then(function() {
-        $('#myModal').modal('show');
-      });
+
+        {{!-- call start modal --}}
+    <script>
+         $(window).on('load', function(){        
+           $('#myModal').modal('show');
+            }); 
+         $(function () {
+              $(".custom-close").on('click', function() {
+                  $('#myModal').modal('hide');
+              });
+          });
     </script>
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+    {{!-- BEGIN VENDOR JS --}}
+    <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
     <script type="text/javascript" src="assets/plugins/select2/js/select2.full.min.js"></script>
     <script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
     <script src="assets/plugins/switchery/js/switchery.min.js" type="text/javascript"></script>
@@ -2417,17 +2418,11 @@
     <script src="assets/plugins/nvd3/src/models/line.js" type="text/javascript"></script>
     <script src="assets/plugins/nvd3/src/models/lineWithFocusChart.js" type="text/javascript"></script>
     <script src="assets/plugins/mapplic/js/hammer.min.js"></script>
-    <script src="assets/plugins/mapplic/js/jquery.mousewheel.js"></script>
     <script src="assets/plugins/mapplic/js/mapplic.js"></script>
     <script src="assets/plugins/rickshaw/rickshaw.min.js"></script>
-    <script src="assets/plugins/jquery-metrojs/MetroJs.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
     <script src="assets/plugins/skycons/skycons.js" type="text/javascript"></script>
     <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
-
     <script src="pages/js/pages.js"></script>
-
     <script src="assets/js/scripts.js" type="text/javascript"></script>
-
     <script src="assets/js/dashboard.js" type="text/javascript"></script>
     <script src="assets/js/scripts.js" type="text/javascript"></script>

@@ -53,3 +53,13 @@ table th h1 {
 .social-icons-share a img {
     height: 35px;
 }
+
+.modal.fade.fill-in {
+    background-color: rgba(57, 109, 197, 0.9) !important;
+    color: white;
+}
+
+.btn-primary-outline {
+    background: transparent !important;
+    color: white;
+}
