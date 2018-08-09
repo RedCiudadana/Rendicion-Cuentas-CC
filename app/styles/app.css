@@ -28,3 +28,28 @@ table th h1 {
 .table td, .table th {
     border: 0px !important;
 }
+
+.modal {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+}
+
+.social-icons {
+    margin-right: 100px;
+}
+
+.social-icons a {
+    margin: auto 10px;
+}
+
+.social-icons a img {
+    height: 35px;
+}
+
+.social-icons-share a {
+    margin: 0 10px 20px;
+}
+
+.social-icons-share a img {
+    height: 35px;
+}
