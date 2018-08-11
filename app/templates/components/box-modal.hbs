@@ -1,0 +1,253 @@
+{{!-- Box Button --}}
+<div class="ar-1-1">
+  <div class="card no-border bg-primary"  data-toggle="modal" data-target="#modal1">
+    <div class="card-body text-center">
+      <img src="img/numero-expedientes.png" alt="Número de expedientes ingresados" ><br>
+      <strong class="text-white">Número de expedientes ingresados</strong>
+    </div>
+  </div>
+</div>
+{{!-- Modal page --}}
+<div class="modal fade slide-up" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="{{id}}" aria-hidden="false">
+    <div class="modal-dialog ">
+        <div class="modal-content-wrapper">
+          <div class="modal-content">
+              <div class="modal-header clearfix text-left">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14"></i>
+                  </button>
+                  <div class="d-flex align-items-center social-icons-share">
+                    <a href="#">
+                      <img src="img/fb-color.png" alt="Facebook">
+                    </a>
+                    <a href="#">
+                      <img src="img/tt-color.png" alt="Twitter">
+                    </a>
+                  </div>
+              </div>
+              <div class="body-modal">
+                  {{!-- bg-primary section --}}
+                  <div class="container-fluid no-padding bg-primary">
+                    <div class="row">
+                      <div class="col-md-4 text-center">
+                        <img src="{{data.img}}" alt="{{data.title}}" ><br>
+                      </div>
+                      <div class="col-md-8 padding-30">
+                        <h1 class="text-white bold">{{data.title}}</h1>
+                        <p class="text-white"><strong>Descripción:</strong><br>
+                          {{data.description}}
+                        </p>
+                        <div class="buttons text-center">
+                          <button class="btn btn-lg btn-rounded">Descargar informe actual</button>
+                          <button class="btn btn-lg btn-rounded">Informe de datos (CSV)</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {{!-- box section --}}
+                  <div class="container-fluid padding-20 bg-master-light">
+                    <div class="row text-center">
+                      <div class="col-md-4 padding-20">
+                        <h6 class="hint-text">Ingresados mes anterior</h6>
+                        <div class="rounded text-center bg-white">
+                          <h1 class="bold hint-text">{{data.monthPreviousTotal}}</h1>
+                        </div>
+                      </div>
+                      <div class="col-md-4 padding-20">
+                        <h6 class="hint-text">Ingresados mes actual</h6>
+                        <div class="rounded text-center bg-white">
+                          <h1 class="bold hint-text">{{data.monthCurrentTotal}}</h1>
+                        </div>
+                      </div>
+                      <div class="col-md-4 padding-20">
+                        <h6 class="hint-text">Ingresados acumulado</h6>
+                        <div class="rounded text-center bg-white">
+                          <h1 class="bold hint-text">{{data.monthAccumulatedTotal}}</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {{!-- tabs section --}}
+                  <div class="container-fluid no-padding">
+                    <div class="panel">
+                      <ul class="nav nav-tabs nav-tabs-fillup">
+                        <li class="active">
+                          <a data-toggle="tab" href="#monthCurrent">Mes actual</a>
+                        </li>
+                        <li>
+                          <a data-toggle="tab" href="#monthPrevious">Mes anterior</a>
+                        </li>
+                        <li>
+                          <a data-toggle="tab" href="#monthAccumulated">Acumulado</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="monthCurrent">
+                          <div class="row column-seperation padding-30">
+                            <div class="col-sm-12">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">
+                                      <h6>Tipo de expediente</h6>
+                                    </th>
+                                    <th scope="col">
+                                      <h6>No.</h6>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {{#each data.list as item}}
+                                  <tr>
+                                    <th scope="row">
+                                      <h6>{{item.title}}</h6>
+                                      <div class="progress">
+                                        <div class="progress-bar progress-bar-primary" style="width: 35%;"></div>
+                                      </div>
+                                    </th>
+                                    <th class="text-center w-25">
+                                      <h1>{{item.count}}</h1>
+                                    </th>
+                                  </tr>
+                                  {{/each}}
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane" id="monthPrevious">
+                          <div class="row column-seperation padding-30">
+                            <div class="col-sm-12">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">
+                                      <h6>Tipo de expediente</h6>
+                                    </th>
+                                    <th scope="col">
+                                      <h6>No.</h6>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">
+                                      <h6>Expediente</h6>
+                                      <div class="progress">
+                                        <div class="progress-bar progress-bar-primary" style="width: 35%;"></div>
+                                      </div>
+                                    </th>
+                                    <th class="text-center w-25">
+                                      <h1>1</h1>
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">
+                                      <h6>Expediente</h6>
+                                      <div class="progress">
+                                        <div class="progress-bar progress-bar-primary" style="width: 35%;"></div>
+                                      </div>
+                                    </th>
+                                    <th class="text-center w-25">
+                                      <h1>1</h1>
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">
+                                      <h6>Expediente</h6>
+                                      <div class="progress">
+                                        <div class="progress-bar progress-bar-primary" style="width: 35%;"></div>
+                                      </div>
+                                    </th>
+                                    <th class="text-center w-25">
+                                      <h1>1</h1>
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">
+                                      <h6>Expediente</h6>
+                                      <div class="progress">
+                                        <div class="progress-bar progress-bar-primary" style="width: 35%;"></div>
+                                      </div>
+                                    </th>
+                                    <th class="text-center w-25">
+                                      <h1>1</h1>
+                                    </th>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane" id="monthAccumulated">
+                          <div class="row column-seperation padding-30">
+                            <div class="col-sm-12">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">
+                                      <h6>Tipo de expediente</h6>
+                                    </th>
+                                    <th scope="col">
+                                      <h6>No.</h6>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">
+                                      <h6>Expediente</h6>
+                                      <div class="progress">
+                                        <div class="progress-bar progress-bar-primary" style="width: 35%;"></div>
+                                      </div>
+                                    </th>
+                                    <th class="text-center w-25">
+                                      <h1>1</h1>
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">
+                                      <h6>Expediente</h6>
+                                      <div class="progress">
+                                        <div class="progress-bar progress-bar-primary" style="width: 35%;"></div>
+                                      </div>
+                                    </th>
+                                    <th class="text-center w-25">
+                                      <h1>1</h1>
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">
+                                      <h6>Expediente</h6>
+                                      <div class="progress">
+                                        <div class="progress-bar progress-bar-primary" style="width: 35%;"></div>
+                                      </div>
+                                    </th>
+                                    <th class="text-center w-25">
+                                      <h1>1</h1>
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">
+                                      <h6>Expediente</h6>
+                                      <div class="progress">
+                                        <div class="progress-bar progress-bar-primary" style="width: 35%;"></div>
+                                      </div>
+                                    </th>
+                                    <th class="text-center w-25">
+                                      <h1>1</h1>
+                                    </th>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+    </div>
+</div>

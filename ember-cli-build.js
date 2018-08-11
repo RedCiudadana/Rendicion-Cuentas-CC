@@ -4,10 +4,19 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
+
     'ember-cli-uglify': {
       enabled: false
+    },
+
+    'fingerprint': {
+      exclude: ['img/*.png'],
     }
+
   });
+
+  app.import('bower_components/tabletop/src/tabletop.js');
+  app.import('vendor/shims.js');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
