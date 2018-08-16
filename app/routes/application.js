@@ -27,30 +27,23 @@ export default Route.extend({
     }).catch(function(reason){
       console.error(reason);
     });
-    
   },
 
   model() {
-
-    // return this.getResumen().then(function(resolve){
-
-    //   let list = []
-
-    //   for (var i = resolve.resumen.length - 1; i >= 0; i--) {
-    //     list.push(resolve.resumen[i].id)
-    //   }
-
-    //   return {
-    //     resumen: resolve.resumen,
-    //     ejes: list
-    //   };
-
-    // }).catch(function(reason){
-    //   console.error(reason);
-    // });
     return RSVP.hash({
       resumen: this.getResumen(),
-      ejes: this.getData()
+      ejes: 
+      this.getData()
+        .then((response) => {
+          let list = [];
+          for (let i = Object.keys(response).length - 1; i >= 0; i--) {
+            for (let x = response[i].length - 1; x >= 0; x--) {
+              console.log(response[i][x]);
+              list.push(response[i][x]);
+            }
+          }
+          return list;
+      })
     });
   }
 
