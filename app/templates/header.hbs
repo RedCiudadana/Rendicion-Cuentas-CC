@@ -1,0 +1,26 @@
+{{#bulma-nav hasShadow=true}}
+
+  {{#bulma-nav-left isHiddenMobile=true}}
+    <img src="/img/escudo.png" alt="" class="escudo">
+    <img src="/img/banner.png" alt="Red Ciudadana & Corte de Constitucionalidad" class="header-banner">
+  {{/bulma-nav-left}}
+
+  {{!-- ONLY IN MOBILE --}}
+  {{#bulma-nav-center isHiddenTablet=true}}
+    <img src="/img/escudo.png" alt="" class="escudo">
+  {{/bulma-nav-center}}
+
+  {{#bulma-nav-right}}
+    <a href="#" class="nav-item">
+      <span class="icon">
+        <i class="fa fa-twitter"></i>
+      </span>
+    </a>
+    <a href="#" class="nav-item">
+      <span class="icon">
+        <i class="fa fa-facebook"></i>
+      </span>
+    </a>
+  {{/bulma-nav-right}}
+
+{{/bulma-nav}}

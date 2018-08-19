@@ -1,0 +1,51 @@
+// Colors
+$primary: #357cde;
+
+// Border radius
+$radius: 0;
+
+@import "bulma";
+
+// NAVBAR
+
+.nav {
+    height: 5rem;
+    padding: 0 120px 0 120px;
+}
+
+.nav .escudo {
+    height: 60px;
+    width: 60px;
+    margin: auto auto;
+}
+
+.nav .header-banner {
+    height: 45px;
+    margin: auto 10px;
+}
+// MAIN
+
+.banner {
+    padding-top: 2.5rem;
+}
+
+.banner h1 {
+    margin-bottom: 60px !important;
+}
+
+.banner p {
+    padding: auto 100px auto 100px;
+}
+
+.banner video {
+    height: 20rem;
+}
+
+
+.modals .tile figure {
+    margin: auto auto 20px auto;
+}
+
+.modals .tile strong {
+    font-size: 0.85rem;
+}
