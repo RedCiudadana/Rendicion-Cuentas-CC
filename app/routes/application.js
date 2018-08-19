@@ -29,6 +29,20 @@ export default Route.extend({
     });
   },
 
+  clean(item) {
+    delete item.id;
+    delete item.mes;
+    delete item.categoria;
+    delete item.enlaceCSV;
+    delete item.enlaceInforme;
+    delete item.estado;
+    delete item.informe;
+    delete item.temporalidad;
+    delete item.total;
+
+    return item
+  },
+
   model() {
     return RSVP.hash({
       resumen: this.getResumen(),
@@ -36,10 +50,13 @@ export default Route.extend({
       this.getData()
         .then((response) => {
           let list = [];
+          let item
           for (let i = Object.keys(response).length - 1; i >= 0; i--) {
             for (let x = response[i].length - 1; x >= 0; x--) {
-              console.log(response[i][x]);
-              list.push(response[i][x]);
+              item = JSON.parse(JSON.stringify(response[i][x]));
+              item["data"] = response[i][x];
+              item["data"] = this.clean(item["data"]);
+              list.push(item);
             }
           }
           return list;
