@@ -1,6 +1,8 @@
 // Colors
 $primary: #357cde;
 
+$modal-content-width: 90%;
+
 @import "bulma";
 
 // NAVBAR
@@ -38,6 +40,7 @@ $primary: #357cde;
     height: 20rem;
 }
 
+// BOX MODALS
 
 .modals .tile figure {
     margin: auto auto 20px auto;
@@ -46,3 +49,97 @@ $primary: #357cde;
 .modals .tile strong {
     font-size: 0.85rem;
 }
+
+// MODALS
+
+.modal-card {
+    margin-top: 100px;
+}
+
+.modal-card-body {
+    padding: 0px !important;
+}
+
+.modal-header img {
+    width: 80%;
+    max-width: 350px;
+}
+
+.modal-header {
+    background-color: $primary;
+    color: white;
+    padding: 50px 10px 50px 10px;
+}
+
+.modal-header .title, strong {
+    color: white;
+}
+
+.modal-header p {
+    font-weight: lighter;
+}
+
+.modal-header .button {
+    width: 45%;
+    font-weight: lighter;
+    font-size: 1rem;
+    height: 50px;
+}
+
+.modal-general {
+    padding: 30px 0 30px 0;
+    background: $white-ter;
+}
+
+.modal-general .tag {
+    width: 80%;
+    max-width: 330px;
+    height: 50px;
+    border-radius: 10px;
+    background: white;
+}
+
+.modal-data tbody td {
+    border-bottom: 0px;
+    font-weight: lighter;
+}
+
+.modal-data tbody .has-text-centered {
+    padding-top: 35px !important;
+}
+
+.modal-data tbody h6 {
+    font-weight: lighter;
+}
+
+.modal-data progress {
+    height: 30px;
+    border-radius: 2px;
+}
+
+// TABS
+#tab-content p {
+  display: none;
+  padding: 0 5%;
+}
+
+#tab-content p.is-active {
+  display: block;
+}
+
+.tabs ul {
+    border-bottom-color: $primary;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+}
+
+.tabs li.is-active a {
+    background: $primary;
+    color: white;
+    margin-bottom: -2px;
+}
+
+.content ul {
+    margin: 0px;
+}
+

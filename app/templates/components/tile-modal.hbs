@@ -1,0 +1,118 @@
+{{!-- Tile --}}
+<div class="tile is-parent modal-button"  data-target="{{modal-id}}" aria-haspopup="true">
+  <article class="tile is-child notification has-background-grey has-text-centered">
+    <figure class="image is-128x128">
+      <img src="/img/{{modal.image}}">
+    </figure>
+    <strong class="has-text-grey-light">{{modal.title}}</strong>
+  </article>
+</div>
+{{!-- Modal --}}
+<div id="{{modal-id}}" class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title">
+        {{fa-icon "twitter"}}
+        {{fa-icon "facebook"}}
+      </div>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        {{!-- header --}}
+        {{#bulma-columns class="modal-header is-primary"}}
+          {{#bulma-column is4=true class="has-text-centered"}}
+            <img src="/img/justicia-iconos-r-1.png" alt="">
+          {{/bulma-column}}
+          {{#bulma-column class="has-text-centered-mobile"}}
+            <h4 class="title">{{modal.title}}</h4>
+            <p><strong>Descripción:</strong><br>
+              {{modal.description}}
+            </p>
+              {{bulma-button label="Descargar informe actual" isMedium=true}}
+              {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-general --}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="--" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="--" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="--" isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="has-text-centered modal-general"}}
+          {{#bulma-column}}
+            <h6>*Actualizado el -- --- -- </h6>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-tabs --}}
+        {{#bulma-columns class="modal-data"}}
+          {{#bulma-column}}
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="is-active" data-tab="1">
+                  <a>
+                    <span>Mes actual</span>
+                  </a>
+                </li>
+                <li data-tab="2">
+                  <a>
+                    <span>Mes anterior</span>
+                  </a>
+                </li>
+                <li data-tab="3">
+                  <a>
+                    <span>Acumulado</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-content">
+              <p class="is-active" data-content="1">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#each item as |data|}}
+                      <tr>
+                        <td><h6>{{item.key}}</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                        <td class="has-text-centered">1</td>
+                      </tr>
+                      <tr>
+                        <td><h6>{{item.value}}</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                        <td class="has-text-centered">1</td>
+                      </tr>
+                    {{/each}}
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="2">
+                Music
+              </p>
+              <p data-content="3">
+                Videos
+              </p>
+              <p data-content="4">
+                Documents
+              </p>
+            </div>
+
+          {{/bulma-column}}
+        {{/bulma-columns}}
+      </div>
+    </section>
+  </div>
+</div>
