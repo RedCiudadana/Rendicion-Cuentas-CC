@@ -1,0 +1,224 @@
+<div id="main">
+  {{!-- Primary banner --}}
+  {{#bulma-hero isPrimary=true class="banner"}}
+    {{#bulma-hero-content}}
+        {{#bulma-columns}}
+
+          {{#bulma-column is5=true}}
+            <h1 class="title">Justicia Abierta</h1>
+            <p class="is-text has-text-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          {{/bulma-column}}
+
+          {{#bulma-column class="has-text-centered"}}
+            <video controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
+                <!-- Video files -->
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+                <!-- Fallback for browsers that don't support the <video> element -->
+                <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            </video>
+          {{/bulma-column}}
+
+        {{/bulma-columns}}
+    {{/bulma-hero-content}}
+  {{/bulma-hero}}
+  {{!-- Section of modals --}}
+  {{#bulma-section class="has-text-centered modals"}}
+    {{#bulma-container}}
+      <h1 class="has-text-grey-light title is-6">Haz clic en los iconos para conocer el detalle del trabajo</h1>
+      {{!-- row 1 --}}
+      <div class="tile is-ancestor">
+        {{!-- 1 --}}
+        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+          <article class="tile is-child notification has-background-grey has-text-centered">
+            <figure class="image is-128x128">
+              <img src="/img/justicia-iconos-1.png">
+            </figure>
+            <strong class="has-text-grey-light">Número de expedientes ingresados</strong>
+          </article>
+        </div>
+        {{!-- 2 --}}
+        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+          <article class="tile is-child notification has-background-grey has-text-centered">
+            <figure class="image is-128x128">
+              <img src="/img/justicia-iconos-2.png">
+            </figure>
+            <strong class="has-text-grey-light">Número de expedientes ingresados</strong>
+          </article>
+        </div>
+        {{!-- 3 --}}
+        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+          <article class="tile is-child notification has-background-grey has-text-centered">
+            <figure class="image is-128x128">
+              <img src="/img/justicia-iconos-3.png">
+            </figure>
+            <strong class="has-text-grey-light">Número de expedientes ingresados</strong>
+          </article>
+        </div>
+        {{!-- 4 --}}
+        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+          <article class="tile is-child notification has-background-grey has-text-centered">
+            <figure class="image is-128x128">
+              <img src="/img/justicia-iconos-4.png">
+            </figure>
+            <strong class="has-text-grey-light">Número de expedientes ingresados</strong>
+          </article>
+        </div>
+      </div>
+      {{!-- row 2 --}}
+      <div class="tile is-ancestor">
+        {{!-- 1 --}}
+        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+          <article class="tile is-child notification has-background-grey has-text-centered">
+            <figure class="image is-128x128">
+              <img src="/img/justicia-iconos-5.png">
+            </figure>
+            <strong class="has-text-grey-light">Número de expedientes ingresados</strong>
+          </article>
+        </div>
+        {{!-- 2 --}}
+        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+          <article class="tile is-child notification has-background-grey has-text-centered">
+            <figure class="image is-128x128">
+              <img src="/img/justicia-iconos-6.png">
+            </figure>
+            <strong class="has-text-grey-light">Número de expedientes ingresados</strong>
+          </article>
+        </div>
+        {{!-- 3 --}}
+        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+          <article class="tile is-child notification has-background-grey has-text-centered">
+            <figure class="image is-128x128">
+              <img src="/img/justicia-iconos-7.png">
+            </figure>
+            <strong class="has-text-grey-light">Número de expedientes ingresados</strong>
+          </article>
+        </div>
+        {{!-- 4 --}}
+        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+          <article class="tile is-child notification has-background-grey has-text-centered">
+            <figure class="image is-128x128">
+              <img src="/img/justicia-iconos-8.png">
+            </figure>
+            <strong class="has-text-grey-light">Número de expedientes ingresados</strong>
+          </article>
+        </div>
+      </div>
+    {{/bulma-container}}
+  {{/bulma-section}}
+</div>
+
+{{!-- MODALS --}}
+
+<div id="modal-1" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title">
+        {{fa-icon "twitter"}}
+        {{fa-icon "facebook"}}
+      </div>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        {{!-- header --}}
+        {{#bulma-columns class="modal-header is-primary"}}
+          {{#bulma-column is4=true class="has-text-centered"}}
+            <img src="/img/justicia-iconos-r-1.png" alt="">
+          {{/bulma-column}}
+          {{#bulma-column class="has-text-centered-mobile"}}
+            <h4 class="title">Avances de la impoletalsdjfl;a asdfajksdf klasw</h4>
+            <p><strong>Descripción:</strong><br>
+              Expedientes asdf eddgf
+            </p>
+              {{bulma-button label="Descargar informe actual" isMedium=true}}
+              {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-general --}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="has-text-centered modal-general"}}
+          {{#bulma-column}}
+            <h6>*Actualizado el -- --- -- </h6>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-tabs --}}
+        {{#bulma-columns class="modal-data"}}
+          {{#bulma-column}}
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="is-active" data-tab="1">
+                  <a>
+                    <span>Mes actual</span>
+                  </a>
+                </li>
+                <li data-tab="2">
+                  <a>
+                    <span>Mes anterior</span>
+                  </a>
+                </li>
+                <li data-tab="3">
+                  <a>
+                    <span>Acumulado</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-content">
+              <p class="is-active" data-content="1">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="2">
+                Music
+              </p>
+              <p data-content="3">
+                Videos
+              </p>
+              <p data-content="4">
+                Documents
+              </p>
+            </div>
+
+          {{/bulma-column}}
+        {{/bulma-columns}}
+      </div>
+    </section>
+  </div>
+</div>
