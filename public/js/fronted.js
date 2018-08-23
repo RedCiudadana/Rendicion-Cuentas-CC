@@ -17,8 +17,6 @@ $(document).ready(function() {
     $("#" + $(this).data("target")).toggleClass("is-active");
   });
 
-  console.log($(".modal-button"));
-
   $('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button').click(function() {
     $(".modal").removeClass("is-active");
   });

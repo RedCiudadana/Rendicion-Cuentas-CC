@@ -44,7 +44,7 @@
           </article>
         </div>
         {{!-- 2 --}}
-        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+        <div class="tile is-parent modal-button"  data-target="modal-2" aria-haspopup="true">
           <article class="tile is-child notification has-background-grey has-text-centered">
             <figure class="image is-128x128">
               <img src="/img/justicia-iconos-2.png">
@@ -53,7 +53,7 @@
           </article>
         </div>
         {{!-- 3 --}}
-        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+        <div class="tile is-parent modal-button"  data-target="modal-3" aria-haspopup="true">
           <article class="tile is-child notification has-background-grey has-text-centered">
             <figure class="image is-128x128">
               <img src="/img/justicia-iconos-3.png">
@@ -62,7 +62,7 @@
           </article>
         </div>
         {{!-- 4 --}}
-        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+        <div class="tile is-parent modal-button"  data-target="modal-4" aria-haspopup="true">
           <article class="tile is-child notification has-background-grey has-text-centered">
             <figure class="image is-128x128">
               <img src="/img/justicia-iconos-4.png">
@@ -74,7 +74,7 @@
       {{!-- row 2 --}}
       <div class="tile is-ancestor">
         {{!-- 1 --}}
-        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+        <div class="tile is-parent modal-button"  data-target="modal-5" aria-haspopup="true">
           <article class="tile is-child notification has-background-grey has-text-centered">
             <figure class="image is-128x128">
               <img src="/img/justicia-iconos-5.png">
@@ -83,7 +83,7 @@
           </article>
         </div>
         {{!-- 2 --}}
-        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+        <div class="tile is-parent modal-button"  data-target="modal-6" aria-haspopup="true">
           <article class="tile is-child notification has-background-grey has-text-centered">
             <figure class="image is-128x128">
               <img src="/img/justicia-iconos-6.png">
@@ -92,7 +92,7 @@
           </article>
         </div>
         {{!-- 3 --}}
-        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+        <div class="tile is-parent modal-button"  data-target="modal-7" aria-haspopup="true">
           <article class="tile is-child notification has-background-grey has-text-centered">
             <figure class="image is-128x128">
               <img src="/img/justicia-iconos-7.png">
@@ -101,7 +101,7 @@
           </article>
         </div>
         {{!-- 4 --}}
-        <div class="tile is-parent modal-button"  data-target="modal-1" aria-haspopup="true">
+        <div class="tile is-parent modal-button"  data-target="modal-8" aria-haspopup="true">
           <article class="tile is-child notification has-background-grey has-text-centered">
             <figure class="image is-128x128">
               <img src="/img/justicia-iconos-8.png">
@@ -134,9 +134,9 @@
             <img src="/img/justicia-iconos-r-1.png" alt="">
           {{/bulma-column}}
           {{#bulma-column class="has-text-centered-mobile"}}
-            <h4 class="title">Avances de la impoletalsdjfl;a asdfajksdf klasw</h4>
+            <h4 class="title">Avances de la categoria</h4>
             <p><strong>Descripción:</strong><br>
-              Expedientes asdf eddgf
+              Descripcion de la categoria
             </p>
               {{bulma-button label="Descargar informe actual" isMedium=true}}
               {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
@@ -206,10 +206,1037 @@
                 {{/bulma-table}}
               </p>
               <p data-content="2">
-                Music
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
               </p>
               <p data-content="3">
-                Videos
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="4">
+                Documents
+              </p>
+            </div>
+
+          {{/bulma-column}}
+        {{/bulma-columns}}
+      </div>
+    </section>
+  </div>
+</div>
+
+<div id="modal-2" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title">
+        {{fa-icon "twitter"}}
+        {{fa-icon "facebook"}}
+      </div>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        {{!-- header --}}
+        {{#bulma-columns class="modal-header is-primary"}}
+          {{#bulma-column is4=true class="has-text-centered"}}
+            <img src="/img/justicia-iconos-r-2.png" alt="">
+          {{/bulma-column}}
+          {{#bulma-column class="has-text-centered-mobile"}}
+            <h4 class="title">Avances de la categoria</h4>
+            <p><strong>Descripción:</strong><br>
+              Descripcion de la categoria
+            </p>
+              {{bulma-button label="Descargar informe actual" isMedium=true}}
+              {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-general --}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="has-text-centered modal-general"}}
+          {{#bulma-column}}
+            <h6>*Actualizado el -- --- -- </h6>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-tabs --}}
+        {{#bulma-columns class="modal-data"}}
+          {{#bulma-column}}
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="is-active" data-tab="1">
+                  <a>
+                    <span>Mes actual</span>
+                  </a>
+                </li>
+                <li data-tab="2">
+                  <a>
+                    <span>Mes anterior</span>
+                  </a>
+                </li>
+                <li data-tab="3">
+                  <a>
+                    <span>Acumulado</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-content">
+              <p class="is-active" data-content="1">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="2">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="3">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="4">
+                Documents
+              </p>
+            </div>
+
+          {{/bulma-column}}
+        {{/bulma-columns}}
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<div id="modal-3" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title">
+        {{fa-icon "twitter"}}
+        {{fa-icon "facebook"}}
+      </div>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        {{!-- header --}}
+        {{#bulma-columns class="modal-header is-primary"}}
+          {{#bulma-column is4=true class="has-text-centered"}}
+            <img src="/img/justicia-iconos-r-3.png" alt="">
+          {{/bulma-column}}
+          {{#bulma-column class="has-text-centered-mobile"}}
+            <h4 class="title">Avances de la categoria</h4>
+            <p><strong>Descripción:</strong><br>
+              Descripcion de la categoria
+            </p>
+              {{bulma-button label="Descargar informe actual" isMedium=true}}
+              {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-general --}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="has-text-centered modal-general"}}
+          {{#bulma-column}}
+            <h6>*Actualizado el -- --- -- </h6>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-tabs --}}
+        {{#bulma-columns class="modal-data"}}
+          {{#bulma-column}}
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="is-active" data-tab="1">
+                  <a>
+                    <span>Mes actual</span>
+                  </a>
+                </li>
+                <li data-tab="2">
+                  <a>
+                    <span>Mes anterior</span>
+                  </a>
+                </li>
+                <li data-tab="3">
+                  <a>
+                    <span>Acumulado</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-content">
+              <p class="is-active" data-content="1">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="2">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="3">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="4">
+                Documents
+              </p>
+            </div>
+
+          {{/bulma-column}}
+        {{/bulma-columns}}
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<div id="modal-4" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title">
+        {{fa-icon "twitter"}}
+        {{fa-icon "facebook"}}
+      </div>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        {{!-- header --}}
+        {{#bulma-columns class="modal-header is-primary"}}
+          {{#bulma-column is4=true class="has-text-centered"}}
+            <img src="/img/justicia-iconos-r-4.png" alt="">
+          {{/bulma-column}}
+          {{#bulma-column class="has-text-centered-mobile"}}
+            <h4 class="title">Avances de la categoria</h4>
+            <p><strong>Descripción:</strong><br>
+              Descripcion de la categoria
+            </p>
+              {{bulma-button label="Descargar informe actual" isMedium=true}}
+              {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-general --}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="has-text-centered modal-general"}}
+          {{#bulma-column}}
+            <h6>*Actualizado el -- --- -- </h6>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-tabs --}}
+        {{#bulma-columns class="modal-data"}}
+          {{#bulma-column}}
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="is-active" data-tab="1">
+                  <a>
+                    <span>Mes actual</span>
+                  </a>
+                </li>
+                <li data-tab="2">
+                  <a>
+                    <span>Mes anterior</span>
+                  </a>
+                </li>
+                <li data-tab="3">
+                  <a>
+                    <span>Acumulado</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-content">
+              <p class="is-active" data-content="1">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="2">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="3">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="4">
+                Documents
+              </p>
+            </div>
+
+          {{/bulma-column}}
+        {{/bulma-columns}}
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<div id="modal-5" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title">
+        {{fa-icon "twitter"}}
+        {{fa-icon "facebook"}}
+      </div>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        {{!-- header --}}
+        {{#bulma-columns class="modal-header is-primary"}}
+          {{#bulma-column is4=true class="has-text-centered"}}
+            <img src="/img/justicia-iconos-r-5.png" alt="">
+          {{/bulma-column}}
+          {{#bulma-column class="has-text-centered-mobile"}}
+            <h4 class="title">Avances de la categoria</h4>
+            <p><strong>Descripción:</strong><br>
+              Descripcion de la categoria
+            </p>
+              {{bulma-button label="Descargar informe actual" isMedium=true}}
+              {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-general --}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="has-text-centered modal-general"}}
+          {{#bulma-column}}
+            <h6>*Actualizado el -- --- -- </h6>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-tabs --}}
+        {{#bulma-columns class="modal-data"}}
+          {{#bulma-column}}
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="is-active" data-tab="1">
+                  <a>
+                    <span>Mes actual</span>
+                  </a>
+                </li>
+                <li data-tab="2">
+                  <a>
+                    <span>Mes anterior</span>
+                  </a>
+                </li>
+                <li data-tab="3">
+                  <a>
+                    <span>Acumulado</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-content">
+              <p class="is-active" data-content="1">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="2">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="3">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="4">
+                Documents
+              </p>
+            </div>
+
+          {{/bulma-column}}
+        {{/bulma-columns}}
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<div id="modal-6" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title">
+        {{fa-icon "twitter"}}
+        {{fa-icon "facebook"}}
+      </div>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        {{!-- header --}}
+        {{#bulma-columns class="modal-header is-primary"}}
+          {{#bulma-column is4=true class="has-text-centered"}}
+            <img src="/img/justicia-iconos-r-6.png" alt="">
+          {{/bulma-column}}
+          {{#bulma-column class="has-text-centered-mobile"}}
+            <h4 class="title">Avances de la categoria</h4>
+            <p><strong>Descripción:</strong><br>
+              Descripcion de la categoria
+            </p>
+              {{bulma-button label="Descargar informe actual" isMedium=true}}
+              {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-general --}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="has-text-centered modal-general"}}
+          {{#bulma-column}}
+            <h6>*Actualizado el -- --- -- </h6>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-tabs --}}
+        {{#bulma-columns class="modal-data"}}
+          {{#bulma-column}}
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="is-active" data-tab="1">
+                  <a>
+                    <span>Mes actual</span>
+                  </a>
+                </li>
+                <li data-tab="2">
+                  <a>
+                    <span>Mes anterior</span>
+                  </a>
+                </li>
+                <li data-tab="3">
+                  <a>
+                    <span>Acumulado</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-content">
+              <p class="is-active" data-content="1">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="2">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="3">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="4">
+                Documents
+              </p>
+            </div>
+
+          {{/bulma-column}}
+        {{/bulma-columns}}
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<div id="modal-7" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title">
+        {{fa-icon "twitter"}}
+        {{fa-icon "facebook"}}
+      </div>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        {{!-- header --}}
+        {{#bulma-columns class="modal-header is-primary"}}
+          {{#bulma-column is4=true class="has-text-centered"}}
+            <img src="/img/justicia-iconos-r-7.png" alt="">
+          {{/bulma-column}}
+          {{#bulma-column class="has-text-centered-mobile"}}
+            <h4 class="title">Avances de la categoria</h4>
+            <p><strong>Descripción:</strong><br>
+              Descripcion de la categoria
+            </p>
+              {{bulma-button label="Descargar informe actual" isMedium=true}}
+              {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-general --}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="has-text-centered modal-general"}}
+          {{#bulma-column}}
+            <h6>*Actualizado el -- --- -- </h6>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-tabs --}}
+        {{#bulma-columns class="modal-data"}}
+          {{#bulma-column}}
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="is-active" data-tab="1">
+                  <a>
+                    <span>Mes actual</span>
+                  </a>
+                </li>
+                <li data-tab="2">
+                  <a>
+                    <span>Mes anterior</span>
+                  </a>
+                </li>
+                <li data-tab="3">
+                  <a>
+                    <span>Acumulado</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-content">
+              <p class="is-active" data-content="1">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="2">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="3">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="4">
+                Documents
+              </p>
+            </div>
+
+          {{/bulma-column}}
+        {{/bulma-columns}}
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<div id="modal-8" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title">
+        {{fa-icon "twitter"}}
+        {{fa-icon "facebook"}}
+      </div>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        {{!-- header --}}
+        {{#bulma-columns class="modal-header is-primary"}}
+          {{#bulma-column is4=true class="has-text-centered"}}
+            <img src="/img/justicia-iconos-r-8.png" alt="">
+          {{/bulma-column}}
+          {{#bulma-column class="has-text-centered-mobile"}}
+            <h4 class="title">Avances de la categoria</h4>
+            <p><strong>Descripción:</strong><br>
+              Descripcion de la categoria
+            </p>
+              {{bulma-button label="Descargar informe actual" isMedium=true}}
+              {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-general --}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados</h6>
+            {{bulma-tag tag="20" isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="has-text-centered modal-general"}}
+          {{#bulma-column}}
+            <h6>*Actualizado el -- --- -- </h6>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-tabs --}}
+        {{#bulma-columns class="modal-data"}}
+          {{#bulma-column}}
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="is-active" data-tab="1">
+                  <a>
+                    <span>Mes actual</span>
+                  </a>
+                </li>
+                <li data-tab="2">
+                  <a>
+                    <span>Mes anterior</span>
+                  </a>
+                </li>
+                <li data-tab="3">
+                  <a>
+                    <span>Acumulado</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-content">
+              <p class="is-active" data-content="1">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="2">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
+              </p>
+              <p data-content="3">
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                    <tr>
+                      <td><h6>Amparo</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
+                      <td class="has-text-centered">1</td>
+                    </tr>
+                  </tbody>
+                {{/bulma-table}}
               </p>
               <p data-content="4">
                 Documents
