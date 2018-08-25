@@ -5,16 +5,19 @@ export default Route.extend({
 
   spreadsheets: service(),
 
-  clean(data) {
+  // Agrega 'data' al diccionaro que contiene los datos para mostrar en tablas.
+  remodelData(data) {
 
     let listData = [];
 
     for (var i = data.length - 1; i >= 0; i--) {
       let item = null;
 
+      // Copia el diccionario
       item = JSON.parse(JSON.stringify(data[i]));
+      // Almacena el diccionario en 'data'
       item["data"] = data[i];
-
+      // Limpia 'data' para dejar solos los datos necesarios
       delete item["data"].id;
       delete item["data"].mes;
       delete item["data"].categoria;
@@ -37,14 +40,14 @@ export default Route.extend({
     return this.get('spreadsheets').fetch().then((value) => {
       return {
         resumen: value['resumen'].elements,
-        cc1: this.clean(value['cc-1'].elements),
-        cc2: this.clean(value['cc-2'].elements),
-        cc3: this.clean(value['cc-3'].elements),
-        cc4: this.clean(value['cc-4'].elements),
-        cc5: this.clean(value['cc-5'].elements),
-        cc6: this.clean(value['cc-6'].elements),
-        cc7: this.clean(value['cc-7'].elements),
-        cc8: this.clean(value['cc-6'].elements)
+        cc1: this.remodelData(value['cc-1'].elements),
+        cc2: this.remodelData(value['cc-2'].elements),
+        cc3: this.remodelData(value['cc-3'].elements),
+        cc4: this.remodelData(value['cc-4'].elements),
+        cc5: this.remodelData(value['cc-5'].elements),
+        cc6: this.remodelData(value['cc-6'].elements),
+        cc7: this.remodelData(value['cc-7'].elements),
+        cc8: this.remodelData(value['cc-6'].elements)
       };
     });
   }

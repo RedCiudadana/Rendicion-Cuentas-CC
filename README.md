@@ -1,56 +1,20 @@
-# rendicion-cuentas-cc
+# Light Documentation
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Ligera documetación del proyecto. 
 
-## Prerequisites
+## Packages
 
-You will need the following things properly installed on your computer.
+Lista de paquetes usados:
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+##### Bower packages
++ Tabletop: fuente principal de datos encapsulado en [spreadsheets service](https://github.com/RedCiudadana/Rendicion-Cuentas-CC/blob/bulma/app/services/spreadsheets.js) . [Tabletop](https://github.com/jsoma/tabletop).
 
-## Installation
+##### Ember Addons
++ Ember-bulma: CSS Components. [ember-bulma repository](https://github.com/open-tux/ember-bulma)
++ Ember-cli-deploy & [ember-cli-deploy-git](https://github.com/ef4/ember-cli-deploy-git).
 
-* `git clone <repository-url>` this repository
-* `cd rendicion-cuentas-cc`
-* `npm install`
+## Otros
 
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* [fronted.js](https://github.com/RedCiudadana/Rendicion-Cuentas-CC/blob/bulma/public/js/fronted.js) : JQuery necesario para el funcionamiento de bulma.
+* [shims.js](https://github.com/RedCiudadana/Rendicion-Cuentas-CC/blob/bulma/public/js/fronted.js) : Agrega tabletop a ember. 
+* [ember readme](https://github.com/RedCiudadana/Rendicion-Cuentas-CC/blob/bulma/READMEEMBER.md)
