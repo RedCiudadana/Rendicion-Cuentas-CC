@@ -1,59 +1,52 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-import RSVP from 'rsvp';
 
 export default Route.extend({
 
   spreadsheets: service(),
 
-  getData() {
+  clean(data) {
 
-    var spreadsheets = this.get('spreadsheets');
+    let listData = [];
 
-    return spreadsheets.fetch("resumen").then(function(value){
+    for (var i = data.length - 1; i >= 0; i--) {
+      let item = null;
 
-      var list = [];
+      item = JSON.parse(JSON.stringify(data[i]));
+      item["data"] = data[i];
 
-      for (var i = value.length - 1; i >= 0; i--) {
-        list.push(spreadsheets.fetch(value[i].id))
-      }
+      delete item["data"].id;
+      delete item["data"].mes;
+      delete item["data"].categoria;
+      delete item["data"].enlaceCSV;
+      delete item["data"].enlaceInforme;
+      delete item["data"].estado;
+      delete item["data"].informe;
+      delete item["data"].temporalidad;
+      delete item["data"].total;
 
-      return RSVP.hash(list)
+      listData.push(item);
+    }
 
-    }).catch(function(reason){
-      console.error(reason);
-    });
+    return listData
+
   },
 
-  clean(item) {
-    delete item.id;
-    delete item.mes;
-    delete item.categoria;
-    delete item.enlaceCSV;
-    delete item.enlaceInforme;
-    delete item.estado;
-    delete item.informe;
-    delete item.temporalidad;
-    delete item.total;
-
-    return item
-  },
 
   model() {
-    return this.getData()
-        .then((response) => {
-          let list = [];
-          let item
-          for (let i = Object.keys(response).length - 1; i >= 0; i--) {
-            for (let x = response[i].length - 1; x >= 0; x--) {
-              item = JSON.parse(JSON.stringify(response[i][x]));
-              item["data"] = response[i][x];
-              item["data"] = this.clean(item["data"]);
-              list.push(item);
-            }
-          }
-          return list;
-      });
+    return this.get('spreadsheets').fetch().then((value) => {
+      return {
+        resumen: value['resumen'].elements,
+        cc1: this.clean(value['cc-1'].elements),
+        cc2: this.clean(value['cc-2'].elements),
+        cc3: this.clean(value['cc-3'].elements),
+        cc4: this.clean(value['cc-4'].elements),
+        cc5: this.clean(value['cc-5'].elements),
+        cc6: this.clean(value['cc-6'].elements),
+        cc7: this.clean(value['cc-7'].elements),
+        cc8: this.clean(value['cc-6'].elements)
+      };
+    });
   }
 
 });

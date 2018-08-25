@@ -10,7 +10,7 @@ export default Service.extend({
     this._super(...arguments);
   },
 
-  fetch(worksheetName = 'data') {
+  fetch() {
 
     return new RSVP.Promise((resolve) => {
 
@@ -19,29 +19,11 @@ export default Service.extend({
       Tabletop.init({
         key: spreadsheetUrl,
         callback: (data) => {
-          if (isNone(data[worksheetName])) {
-            let errorMessage = `Got no answer for spreadsheet ${worksheetName}`;
-            // TODO: Get back vorkin
-            // this.get('flashMessages').danger(errorMessage, {sticky: true});
-
-            // TODO: Convertir en alerta de console.log
-            console.error(errorMessage);
-
+          if (isNone(data)) {
             return resolve([]);
           }
 
-          if (isNone(data[worksheetName].elements)) {
-            let errorMessage = `Got a problem with the elements for spreadsheet ${worksheetName}`;
-            // TODO: Get back vorkin
-            // this.get('flashMessages').danger(errorMessage, {sticky: true});
-
-            // TODO: Convertir en alerta de console.log
-            console.log(errorMessage);
-
-            return resolve([]);
-          }
-
-          resolve(data[worksheetName].elements);
+          resolve(data);
         }
       });
     });
