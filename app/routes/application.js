@@ -10,7 +10,7 @@ export default Route.extend({
 
     let listData = [];
 
-    for (var i = data.length - 1; i >= 0; i--) {
+    for (let i = data.length - 1; i >= 0; i--) {
       let item = null;
 
       // Copia el diccionario
@@ -31,7 +31,13 @@ export default Route.extend({
       listData.push(item);
     }
 
-    return listData
+    var dict = {};
+
+    for (let i = listData.length - 1; i >= 0; i--) {
+      dict[listData[i].estado] = listData[i];
+    }
+
+    return dict;
 
   },
 
