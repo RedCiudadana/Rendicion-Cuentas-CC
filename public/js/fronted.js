@@ -15,10 +15,15 @@ $(document).ready(function() {
 
   $(".modal-button").click(function() {
     $("#" + $(this).data("target")).toggleClass("is-active");
+    $("html").toggleClass("overflow-hidden");
+
+    $("#" + $(this).data("target") + " .modal-card-body").focus();
+
   });
 
   $('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button').click(function() {
     $(".modal").removeClass("is-active");
+    $("html").removeClass("overflow-hidden");
   });
 
   // ** TABS **
