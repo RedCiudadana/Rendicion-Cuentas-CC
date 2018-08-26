@@ -40,6 +40,13 @@ $modal-content-width: 90%;
     height: 20rem;
 }
 
+// TILES
+@media (min-width: 700px) {
+    .modals .is-ancestor .is-4 {
+        width: 25% !important;
+    }
+}
+
 // BOX MODALS
 
 .modals .tile figure {

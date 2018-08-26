@@ -1,14 +1,27 @@
+{{!-- Parameters --}}
+{{!-- 
+resumen.id = html id
+resumen = datos descriptivos
+actual = datos mes actual
+anterior = datos mes anterios
+acumulado = datos mes acumulado
+
+ --}}
 {{!-- Tile --}}
-<div class="tile is-parent modal-button"  data-target="{{modal-id}}" aria-haspopup="true">
+<div class="tile is-parent modal-button" data-target="{{resumen.id}}" aria-haspopup="true">
   <article class="tile is-child notification has-background-grey has-text-centered">
-    <figure class="image is-128x128">
-      <img src="/img/{{modal.image}}">
-    </figure>
-    <strong class="has-text-grey-light">{{modal.title}}</strong>
+    <div class="content">
+      <figure class="image is-128x128">
+        <img src="/img/{{resumen.id}}.png">
+      </figure>
+      <div class="content">
+        <p class="has-text-grey-light">{{resumen.eje}}</p>
+      </div>
+    </div>
   </article>
 </div>
 {{!-- Modal --}}
-<div id="{{modal-id}}" class="modal is-active">
+<div id="{{resumen.id}}" class="modal">
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
@@ -23,12 +36,12 @@
         {{!-- header --}}
         {{#bulma-columns class="modal-header is-primary"}}
           {{#bulma-column is4=true class="has-text-centered"}}
-            <img src="/img/justicia-iconos-r-1.png" alt="">
+            <img src="/img/{{resumen.id}}-r.png" alt="">
           {{/bulma-column}}
           {{#bulma-column class="has-text-centered-mobile"}}
-            <h4 class="title">{{modal.title}}</h4>
+            <h4 class="title">{{resumen.eje}}</h4>
             <p><strong>Descripción:</strong><br>
-              {{modal.description}}
+              {{resumen.descripcion}}
             </p>
               {{bulma-button label="Descargar informe actual" isMedium=true}}
               {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
@@ -61,16 +74,19 @@
               <ul>
                 <li class="is-active" data-tab="1">
                   <a>
+                    {{!-- 4 --}}
                     <span>Mes actual</span>
                   </a>
                 </li>
                 <li data-tab="2">
                   <a>
+                    {{!-- 3 --}}
                     <span>Mes anterior</span>
                   </a>
                 </li>
                 <li data-tab="3">
                   <a>
+                    {{!-- 0 --}}
                     <span>Acumulado</span>
                   </a>
                 </li>
@@ -86,27 +102,50 @@
                     </tr>
                   </thead>
                   <tbody>
-                    {{#each item as |data|}}
+                    {{#each-in actual as |key value|}}
                       <tr>
-                        <td><h6>{{item.key}}</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
-                        <td class="has-text-centered">1</td>
+                        <td><h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}</td>
+                        <td class="has-text-centered">{{value}}</td>
                       </tr>
-                      <tr>
-                        <td><h6>{{item.value}}</h6>{{bulma-progress isPrimary=true value=20 max=100}}</td>
-                        <td class="has-text-centered">1</td>
-                      </tr>
-                    {{/each}}
+                    {{/each-in}}
                   </tbody>
                 {{/bulma-table}}
               </p>
               <p data-content="2">
-                Music
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#each-in anterior as |key value|}}
+                      <tr>
+                        <td><h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}</td>
+                        <td class="has-text-centered">{{value}}</td>
+                      </tr>
+                    {{/each-in}}
+                  </tbody>
+                {{/bulma-table}}
               </p>
               <p data-content="3">
-                Videos
-              </p>
-              <p data-content="4">
-                Documents
+                {{#bulma-table isStriped=true class="is-fullwidth"}}
+                  <thead>
+                    <tr>
+                      <th>Tipo de expediente</th>
+                      <th>No.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#each-in acumulado as |key value|}}
+                      <tr>
+                        <td><h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}</td>
+                        <td class="has-text-centered">{{value}}</td>
+                      </tr>
+                    {{/each-in}}
+                  </tbody>
+                {{/bulma-table}}
               </p>
             </div>
 
