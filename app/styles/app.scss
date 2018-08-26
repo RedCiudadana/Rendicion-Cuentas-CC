@@ -91,7 +91,7 @@ $modal-content-width: 90%;
 }
 
 .modal-header .button {
-    width: 45%;
+    margin-top: 10px;
     font-weight: lighter;
     font-size: 1rem;
     height: 50px;
@@ -100,6 +100,7 @@ $modal-content-width: 90%;
 .modal-general {
     padding: 30px 0 30px 0;
     background: $white-ter;
+    margin: -15px !important;
 }
 
 .modal-general .tag {
@@ -110,17 +111,8 @@ $modal-content-width: 90%;
     background: white;
 }
 
-.modal-data tbody td {
-    border-bottom: 0px;
-    font-weight: lighter;
-}
-
-.modal-data tbody .has-text-centered {
-    padding-top: 35px !important;
-}
-
-.modal-data tbody h6 {
-    font-weight: lighter;
+.modal-data .columns {
+    border-bottom: 1px solid $white-ter;
 }
 
 .modal-data progress {
@@ -129,6 +121,10 @@ $modal-content-width: 90%;
 }
 
 // TABS
+#tab-content {
+    padding-bottom: 50px;
+}
+
 #tab-content p {
   display: none;
   padding: 0 5%;

@@ -42,8 +42,10 @@ acumulado = datos mes acumulado
             <p><strong>Descripción:</strong><br>
               {{resumen.descripcion}}
             </p>
-              <a href="{{actual.enlaceInforme}}" target="_blank">{{bulma-button label="Descargar informe actual" isMedium=true}}</a>
-              <a href="{{actual.enlaceCSV}}" target="_blank">{{bulma-button label="Informe de datos (CSV)" isMedium=true}}</a>
+              <div>
+                <a href="{{actual.enlaceInforme}}" target="_blank">{{bulma-button label="Descargar informe actual" isMedium=true}}</a>
+                <a href="{{actual.enlaceCSV}}" target="_blank">{{bulma-button label="Informe de datos (CSV)" isMedium=true}}</a>
+              </div>
           {{/bulma-column}}
         {{/bulma-columns}}
         {{!-- data-general --}}
@@ -93,70 +95,88 @@ acumulado = datos mes acumulado
             </div>
             <div id="tab-content">
               <p class="is-active" data-content="1">
-                {{#bulma-table isStriped=true class="is-fullwidth"}}
-                  <thead>
-                    <tr>
-                      <th>Tipo de expediente</th>
-                      <th>No.</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {{#each-in actual.data as |key value|}}
-                      <tr>
-                        <td><h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}</td>
-                        <td class="has-text-centered">{{value}}</td>
-                      </tr>
-                    {{/each-in}}
-                    <tr>
-                      <td><h6>Total</h6>{{bulma-progress isPrimary=true value=actual.total max=100}}</td>
-                      <td class="has-text-centered">{{actual.total}}</td>
-                    </tr>
-                  </tbody>
-                {{/bulma-table}}
+                {{#bulma-columns}}
+                  {{#bulma-column isTwoThirds=true}}
+                    <h6>Tipo de expediente</h6>
+                  {{/bulma-column}}
+                  {{#bulma-column}}
+                    <h6>No.</h6>
+                  {{/bulma-column}}
+                {{/bulma-columns}}
+                {{#each-in actual.data as |key value|}}
+                  {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                      <h6 class="has-text-centered">{{value}}</h6>
+                    {{/bulma-column}}
+                  {{/bulma-columns}}
+                {{/each-in}}
+                {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>Total</h6>
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                    {{bulma-tag tag=actual.total isLarge=true}}
+                    {{/bulma-column}}
+                {{/bulma-columns}}
               </p>
               <p data-content="2">
-                {{#bulma-table isStriped=true class="is-fullwidth"}}
-                  <thead>
-                    <tr>
-                      <th>Tipo de expediente</th>
-                      <th>No.</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {{#each-in anterior.data as |key value|}}
-                      <tr>
-                        <td><h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}</td>
-                        <td class="has-text-centered">{{value}}</td>
-                      </tr>
-                    {{/each-in}}
-                    <tr>
-                      <td><h6>Total</h6>{{bulma-progress isPrimary=true value=anterior.total max=100}}</td>
-                      <td class="has-text-centered">{{anterior.total}}</td>
-                    </tr>
-                  </tbody>
-                {{/bulma-table}}
+                {{#bulma-columns}}
+                  {{#bulma-column isTwoThirds=true}}
+                    <h6>Tipo de expediente</h6>
+                  {{/bulma-column}}
+                  {{#bulma-column}}
+                    <h6>No.</h6>
+                  {{/bulma-column}}
+                {{/bulma-columns}}
+                {{#each-in anterior.data as |key value|}}
+                  {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                      <h6 class="has-text-centered">{{value}}</h6>
+                    {{/bulma-column}}
+                  {{/bulma-columns}}
+                {{/each-in}}
+                {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>Total</h6>
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                      {{bulma-tag tag=anterior.total isLarge=true}}
+                    {{/bulma-column}}
+                {{/bulma-columns}}
               </p>
               <p data-content="3">
-                {{#bulma-table isStriped=true class="is-fullwidth"}}
-                  <thead>
-                    <tr>
-                      <th>Tipo de expediente</th>
-                      <th>No.</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {{#each-in acumulado.data as |key value|}}
-                      <tr>
-                        <td><h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}</td>
-                        <td class="has-text-centered">{{value}}</td>
-                      </tr>
-                    {{/each-in}}
-                    <tr>
-                      <td><h6>Total</h6>{{bulma-progress isPrimary=true value=acumulado.total max=100}}</td>
-                      <td class="has-text-centered">{{acumulado.total}}</td>
-                    </tr>
-                  </tbody>
-                {{/bulma-table}}
+                {{#bulma-columns}}
+                  {{#bulma-column isTwoThirds=true}}
+                    <h6>Tipo de expediente</h6>
+                  {{/bulma-column}}
+                  {{#bulma-column}}
+                    <h6>No.</h6>
+                  {{/bulma-column}}
+                {{/bulma-columns}}
+                {{#each-in acumulado.data as |key value|}}
+                  {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                      <h6 class="has-text-centered">{{value}}</h6>
+                    {{/bulma-column}}
+                  {{/bulma-columns}}
+                {{/each-in}}
+                {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>Total</h6>
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                      {{bulma-tag tag=acumulado.total isLarge=true}}
+                    {{/bulma-column}}
+                {{/bulma-columns}}
               </p>
             </div>
 
