@@ -1,6 +1,5 @@
 {{!-- Parameters --}}
 {{!-- 
-resumen.id = html id
 resumen = datos descriptivos
 actual = datos mes actual
 anterior = datos mes anterios
@@ -43,28 +42,28 @@ acumulado = datos mes acumulado
             <p><strong>Descripción:</strong><br>
               {{resumen.descripcion}}
             </p>
-              {{bulma-button label="Descargar informe actual" isMedium=true}}
-              {{bulma-button label="Informe de datos (CSV)" isMedium=true}}
+              <a href="{{actual.enlaceInforme}}" target="_blank">{{bulma-button label="Descargar informe actual" isMedium=true}}</a>
+              <a href="{{actual.enlaceCSV}}" target="_blank">{{bulma-button label="Informe de datos (CSV)" isMedium=true}}</a>
           {{/bulma-column}}
         {{/bulma-columns}}
         {{!-- data-general --}}
         {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
           {{#bulma-column}}
-            <h6>Ingresados</h6>
-            {{bulma-tag tag="--" isLarge=true}}
+            <h6>Ingresados mes anterior</h6>
+            {{bulma-tag tag=anterior.total isLarge=true}}
           {{/bulma-column}}
           {{#bulma-column}}
-            <h6>Ingresados</h6>
-            {{bulma-tag tag="--" isLarge=true}}
+            <h6>Ingresados mes actual</h6>
+            {{bulma-tag tag=actual.total isLarge=true}}
           {{/bulma-column}}
           {{#bulma-column}}
-            <h6>Ingresados</h6>
-            {{bulma-tag tag="--" isLarge=true}}
+            <h6>Ingresados acumulado</h6>
+            {{bulma-tag tag=acumulado.total isLarge=true}}
           {{/bulma-column}}
         {{/bulma-columns}}
         {{#bulma-columns class="has-text-centered modal-general"}}
           {{#bulma-column}}
-            <h6>*Actualizado el -- --- -- </h6>
+            <h6>*Actualizado el {{actual.temporalidad}} </h6>
           {{/bulma-column}}
         {{/bulma-columns}}
         {{!-- data-tabs --}}
@@ -102,12 +101,16 @@ acumulado = datos mes acumulado
                     </tr>
                   </thead>
                   <tbody>
-                    {{#each-in actual as |key value|}}
+                    {{#each-in actual.data as |key value|}}
                       <tr>
                         <td><h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}</td>
                         <td class="has-text-centered">{{value}}</td>
                       </tr>
                     {{/each-in}}
+                    <tr>
+                      <td><h6>Total</h6>{{bulma-progress isPrimary=true value=actual.total max=100}}</td>
+                      <td class="has-text-centered">{{actual.total}}</td>
+                    </tr>
                   </tbody>
                 {{/bulma-table}}
               </p>
@@ -120,12 +123,16 @@ acumulado = datos mes acumulado
                     </tr>
                   </thead>
                   <tbody>
-                    {{#each-in anterior as |key value|}}
+                    {{#each-in anterior.data as |key value|}}
                       <tr>
                         <td><h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}</td>
                         <td class="has-text-centered">{{value}}</td>
                       </tr>
                     {{/each-in}}
+                    <tr>
+                      <td><h6>Total</h6>{{bulma-progress isPrimary=true value=anterior.total max=100}}</td>
+                      <td class="has-text-centered">{{anterior.total}}</td>
+                    </tr>
                   </tbody>
                 {{/bulma-table}}
               </p>
@@ -138,12 +145,16 @@ acumulado = datos mes acumulado
                     </tr>
                   </thead>
                   <tbody>
-                    {{#each-in acumulado as |key value|}}
+                    {{#each-in acumulado.data as |key value|}}
                       <tr>
                         <td><h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}</td>
                         <td class="has-text-centered">{{value}}</td>
                       </tr>
                     {{/each-in}}
+                    <tr>
+                      <td><h6>Total</h6>{{bulma-progress isPrimary=true value=acumulado.total max=100}}</td>
+                      <td class="has-text-centered">{{acumulado.total}}</td>
+                    </tr>
                   </tbody>
                 {{/bulma-table}}
               </p>
