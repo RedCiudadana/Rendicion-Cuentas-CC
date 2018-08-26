@@ -41,11 +41,21 @@ export default Route.extend({
 
   },
 
+  mapByIdDictonary(listData) {
+    var dict = {};
+
+    for (let i = listData.length - 1; i >= 0; i--) {
+      dict[listData[i].id] = listData[i];
+    }
+
+    return dict;
+  },
+
 
   model() {
     return this.get('spreadsheets').fetch().then((value) => {
       return {
-        resumen: value['resumen'].elements,
+        resumen: this.mapByIdDictonary(value['resumen'].elements),
         cc1: this.remodelData(value['cc-1'].elements),
         cc2: this.remodelData(value['cc-2'].elements),
         cc3: this.remodelData(value['cc-3'].elements),
