@@ -11,7 +11,8 @@ Lista de paquetes usados:
 
 ##### Ember Addons
 + Ember-bulma: CSS Components. [ember-bulma repository](https://github.com/open-tux/ember-bulma)
-+ Ember-cli-deploy & [ember-cli-deploy-git](https://github.com/ef4/ember-cli-deploy-git).
++ Ember-cli-deploy & [ember-cli-deploy-git]: Subir los proyectos a github pages. (https://github.com/ef4/ember-cli-deploy-git).
++ ember-cli-string-helpers: Transformaciones de texto según "case" o "dash" (https://github.com/romulomachado/ember-cli-string-helpers).
 
 ## Otros
 
