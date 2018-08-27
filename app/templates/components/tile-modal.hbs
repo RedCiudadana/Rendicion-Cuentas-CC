@@ -11,7 +11,7 @@ acumulado = datos mes acumulado
   <article class="tile is-child notification has-background-grey has-text-centered">
     <div class="content">
       <figure class="image is-128x128">
-        <img src="/img/{{resumen.id}}.png">
+        <img src="{{rootURL}}/img/{{resumen.id}}.png">
       </figure>
       <div class="content">
         <p class="has-text-grey-light">{{resumen.eje}}</p>
@@ -38,7 +38,7 @@ acumulado = datos mes acumulado
         {{!-- header --}}
         {{#bulma-columns class="modal-header is-primary"}}
           {{#bulma-column is4=true class="has-text-centered"}}
-            <img src="/img/{{resumen.id}}-r.png" alt="">
+            <img src="{{rootURL}}/img/{{resumen.id}}-r.png" alt="">
           {{/bulma-column}}
           {{#bulma-column class="has-text-centered-mobile"}}
             <h4 class="title">{{humanize resumen.eje}}</h4>
