@@ -38,7 +38,7 @@ acumulado = datos mes acumulado
             <img src="/img/{{resumen.id}}-r.png" alt="">
           {{/bulma-column}}
           {{#bulma-column class="has-text-centered-mobile"}}
-            <h4 class="title">{{resumen.eje}}</h4>
+            <h4 class="title">{{humanize resumen.eje}}</h4>
             <p><strong>Descripción:</strong><br>
               {{resumen.descripcion}}
             </p>
@@ -106,7 +106,7 @@ acumulado = datos mes acumulado
                 {{#each-in actual.data as |key value|}}
                   {{#bulma-columns}}
                     {{#bulma-column isTwoThirds=true}}
-                      <h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}
+                      <h6>{{ humanize (dasherize key) }}</h6>{{bulma-progress isPrimary=true value=value max=100}}
                     {{/bulma-column}}
                     {{#bulma-column}}
                       <h6 class="has-text-centered">{{value}}</h6>
@@ -134,7 +134,7 @@ acumulado = datos mes acumulado
                 {{#each-in anterior.data as |key value|}}
                   {{#bulma-columns}}
                     {{#bulma-column isTwoThirds=true}}
-                      <h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}
+                      <h6>{{ humanize (dasherize key) }}</h6>{{bulma-progress isPrimary=true value=value max=100}}
                     {{/bulma-column}}
                     {{#bulma-column}}
                       <h6 class="has-text-centered">{{value}}</h6>
@@ -162,7 +162,7 @@ acumulado = datos mes acumulado
                 {{#each-in acumulado.data as |key value|}}
                   {{#bulma-columns}}
                     {{#bulma-column isTwoThirds=true}}
-                      <h6>{{key}}</h6>{{bulma-progress isPrimary=true value=value max=100}}
+                      <h6>{{ humanize (dasherize key) }}</h6>{{bulma-progress isPrimary=true value=value max=100}}
                     {{/bulma-column}}
                     {{#bulma-column}}
                       <h6 class="has-text-centered">{{value}}</h6>
