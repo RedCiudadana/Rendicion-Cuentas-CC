@@ -44,8 +44,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/Rendicion-Cuentas-CC/';
-    ENV.rootURL = '/Rendicion-Cuentas-CC/';
+    // hola
   }
 
   return ENV;

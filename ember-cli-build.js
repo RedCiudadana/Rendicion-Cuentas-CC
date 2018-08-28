@@ -4,7 +4,9 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'fingerprint': {
+      exclude: ['img/*.png'],
+    }
   });
 
   app.import('bower_components/tabletop/src/tabletop.js');
