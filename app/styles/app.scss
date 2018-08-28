@@ -179,6 +179,11 @@ $modal-content-width: 90%;
   display: block;
 }
 
+.tabs {
+  // EXPLICIT WHITE ~ Safari
+  background: white;
+}
+
 .tabs ul {
     border-bottom-color: $primary;
     border-bottom-style: solid;
