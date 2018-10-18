@@ -26,6 +26,18 @@ $modal-content-width: 90%;
 .nav .fa-twitter {
     margin-left: 30px;
 }
+
+// Footer
+.footer {
+  // corrigiendo padding-bottom
+  padding-bottom: 3rem !important;
+
+  a {
+    color: $dark;
+  }
+}
+
+
 // MAIN
 
 .banner {
@@ -198,6 +210,10 @@ $modal-content-width: 90%;
 
 #tab-content p.is-active {
   display: block;
+}
+
+#tab-content .value {
+  margin-top: 30px;
 }
 
 .tabs {
