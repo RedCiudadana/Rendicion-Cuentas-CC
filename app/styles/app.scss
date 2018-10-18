@@ -33,7 +33,7 @@ $modal-content-width: 90%;
 }
 
 .banner h1 {
-    margin-bottom: 60px !important;
+    margin-bottom: 25px;
 }
 
 .banner p {
@@ -173,6 +173,10 @@ $modal-content-width: 90%;
 #tab-content p {
   display: none;
   padding: 0 5%;
+}
+
+#tab-content h6 {
+  text-align: left;
 }
 
 #tab-content p.is-active {
