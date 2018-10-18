@@ -1,34 +1,26 @@
 {{#bulma-footer}}
-  {{#bulma-container}}
     {{#bulma-columns}}
-      {{!-- col-1 --}}
-      {{#bulma-column}}
-        <strong>About</strong>
-        <ul>
-          <li>Metodology</li>
-          <li>We</li>
-          <li>Other</li>
-        </ul>
-      {{/bulma-column}}
-      {{!-- col-2 --}}
-      {{#bulma-column}}
-        <strong>Build with <i class="fa fa-heart"></i> &amp; :</strong>
-        <ul>
-          <li>Ember.js</li>
-          <li>Bulma.io</li>
-          <li>Github pages</li>
-          <li>Font awesome</li>
-        </ul>
-      {{/bulma-column}}
-      {{!-- col-3 --}}
-      {{#bulma-column}}
-        <strong>Contact:</strong>
-        <ul>
-          <li>email: email@host.dom</li>
-          <li>phone: 0000-0000</li>
-          <li>Guatemala City</li>
-        </ul>
-      {{/bulma-column}}
+        {{!col1}}
+        {{#bulma-column}}
+            <h1 class="subtitle">Ayúdanos a llegar a más personas</h1>
+            <ul>
+                <li><a href="http://donacion.redciudadana.org/">{{fa-icon 'heart'}} Donaciones</a></li>
+                <li><a href="http://voluntarios.redciudadana.org/">{{fa-icon 'users'}} Voluntariado</a></li>
+            </ul>
+        {{/bulma-column}}
+
+        {{!col2}}
+        {{#bulma-column class="has-centered-text"}}
+            <h1 class="subtitle">Desarrollado por:</h1>
+            <img src="img/logo-red.png" alt="Red Ciudadana">
+        {{/bulma-column}}
+
+        {{!col3}}
+        {{#bulma-column}}
+            <h1 class="subtitle">Ayúdanos a llegar a más personas</h1>
+            <ul>
+                <li><a href="mailto:info@redciudadana.org.gt">{{fa-icon 'envelope'}} Correo electrónico: info@redciudadana.org</a></li>
+            </ul>
+        {{/bulma-column}}
     {{/bulma-columns}}
-  {{/bulma-container}}
 {{/bulma-footer}}
