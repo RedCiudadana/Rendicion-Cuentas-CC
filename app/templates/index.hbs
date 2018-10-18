@@ -1,0 +1,54 @@
+<div id="main">
+  {{!-- Primary banner --}}
+  {{#bulma-hero isPrimary=true class="banner"}}
+    {{#bulma-hero-content}}
+        {{#bulma-columns}}
+
+          {{#bulma-column is5=true}}
+            <h1 class="title">Justicia Abierta</h1>
+            <p class="is-text has-text-weight-light">En mi discurso de toma de posesión como Magistrada Presidenta de la Corte de Constitucionalidad hice patente el compromiso de rendir cuentas periódicamente a la toda la ciudadanía guatemalteca como parte del eje de trabajo de transparencia y rendición de cuentas. Lo anterior, también constituye un compromiso de la Séptima Magistratura de la Corte con el objetivo consolidar un modelo de justicia constitucional acorde a los estándares de la Justicia Abierta. En ese sentido, mediante el informe de trabajo que hoy rindo, públicamente doy a conocer los avances y proyectos institucionales emprendidos durante la gestión presidencial.</p>
+          {{/bulma-column}}
+
+          {{#bulma-column class="has-text-centered"}}
+            {{!-- <video controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
+                <!-- Video files -->
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
+                <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+                <!-- Fallback for browsers that don't support the <video> element -->
+                <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            </video> --}}
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/IEPTU3rpx1k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          {{/bulma-column}}
+
+        {{/bulma-columns}}
+    {{/bulma-hero-content}}
+  {{/bulma-hero}}
+  {{!-- Section of modals --}}
+  {{#bulma-section class="has-text-centered modals"}}
+    {{#bulma-container}}
+      <h1 class="has-text-grey-light title is-6">Haz clic en los iconos para conocer el detalle del trabajo</h1>
+      {{!-- row 1 --}}
+      <div class="tile is-ancestor">
+        {{!-- 1 --}}
+        {{tile-modal resumen=model.resumen.cc-1 actual=model.cc1.actual anterior=model.cc1.anterior acumulado=model.cc1.acumulado}}
+        {{!-- 2 --}}
+        {{tile-modal resumen=model.resumen.cc-2 actual=model.cc2.actual anterior=model.cc2.anterior acumulado=model.cc2.acumulado}}
+        {{!-- 3 --}}
+        {{tile-modal resumen=model.resumen.cc-3 actual=model.cc3.actual anterior=model.cc3.anterior acumulado=model.cc3.acumulado}}
+        {{!-- 4 --}}
+        {{tile-modal resumen=model.resumen.cc-4 actual=model.cc4.actual anterior=model.cc4.anterior acumulado=model.cc4.acumulado}}
+      </div>
+      <div class="tile is-ancestor">
+        {{!-- 5 --}}
+        {{tile-modal resumen=model.resumen.cc-5 actual=model.cc5.actual anterior=model.cc5.anterior acumulado=model.cc5.acumulado}}
+        {{!-- 6 --}}
+        {{tile-modal resumen=model.resumen.cc-6 actual=model.cc6.actual anterior=model.cc6.anterior acumulado=model.cc6.acumulado}}
+        {{!-- 7 --}}
+        {{tile-modal resumen=model.resumen.cc-7 actual=model.cc7.actual anterior=model.cc7.anterior acumulado=model.cc7.acumulado}}
+        {{!-- 8 --}}
+        {{tile-modal resumen=model.resumen.cc-8 actual=model.cc8.actual anterior=model.cc8.anterior acumulado=model.cc8.acumulado}}
+      </div>
+    {{/bulma-container}}
+  {{/bulma-section}}
+</div>
