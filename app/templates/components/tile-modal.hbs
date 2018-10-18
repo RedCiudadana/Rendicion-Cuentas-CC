@@ -37,16 +37,16 @@ acumulado = datos mes acumulado
       <div class="content">
         {{!-- header --}}
         {{#bulma-columns class="modal-header is-primary"}}
-          {{#bulma-column is4=true class="has-text-centered"}}
+          {{#bulma-column is6=true class="has-text-centered"}}
             <img src="img/{{resumen.id}}-r.png" alt="">
           {{/bulma-column}}
-          {{#bulma-column class="has-text-centered-mobile"}}
+          {{#bulma-column class="has-text-centered-mobile has-text-left"}}
             <h4 class="title">{{humanize resumen.eje}}</h4>
             <p><strong>Descripción:</strong><br>
               {{resumen.descripcion}}
             </p>
               <div>
-                <a href="{{actual.enlaceInforme}}" target="_blank">{{bulma-button label="Descargar informe actual" isMedium=true}}</a>
+                <a href="{{actual.enlaceInforme}}" target="_blank">{{bulma-button label="Descargar informe actual (PDF)" isMedium=true}}</a>
                 <a href="{{actual.enlaceCSV}}" target="_blank">{{bulma-button label="Informe de datos (CSV)" isMedium=true}}</a>
               </div>
           {{/bulma-column}}
@@ -109,7 +109,10 @@ acumulado = datos mes acumulado
                 {{#each-in actual.data as |key value|}}
                   {{#bulma-columns}}
                     {{#bulma-column isTwoThirds=true}}
-                      <h6>{{ humanize (dasherize key) }}</h6>{{bulma-progress isPrimary=true value=value max=100}}
+                      <h6>{{ humanize (dasherize key) }}</h6>
+                      {{bulma-progress isPrimary=true
+                      value=value
+                      max=actual.total}}
                     {{/bulma-column}}
                     {{#bulma-column}}
                       <h6 class="has-text-centered">{{value}}</h6>
@@ -137,7 +140,10 @@ acumulado = datos mes acumulado
                 {{#each-in anterior.data as |key value|}}
                   {{#bulma-columns}}
                     {{#bulma-column isTwoThirds=true}}
-                      <h6>{{ humanize (dasherize key) }}</h6>{{bulma-progress isPrimary=true value=value max=100}}
+                      <h6>{{ humanize (dasherize key) }}</h6>
+                      {{bulma-progress isPrimary=true
+                      value=value
+                      max=anterior.total}}
                     {{/bulma-column}}
                     {{#bulma-column}}
                       <h6 class="has-text-centered">{{value}}</h6>
@@ -165,7 +171,10 @@ acumulado = datos mes acumulado
                 {{#each-in acumulado.data as |key value|}}
                   {{#bulma-columns}}
                     {{#bulma-column isTwoThirds=true}}
-                      <h6>{{ humanize (dasherize key) }}</h6>{{bulma-progress isPrimary=true value=value max=100}}
+                      <h6>{{ humanize (dasherize key) }}</h6>
+                      {{bulma-progress isPrimary=true
+                      value=value
+                      max=acumulado.total}}
                     {{/bulma-column}}
                     {{#bulma-column}}
                       <h6 class="has-text-centered">{{value}}</h6>

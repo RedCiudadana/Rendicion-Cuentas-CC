@@ -40,8 +40,16 @@ $modal-content-width: 90%;
     padding: auto 100px auto 100px;
 }
 
-.banner video {
-    height: 20rem;
+#video {
+    height: 157px;
+    width: 280px;
+}
+
+@media (min-width: 700px) {
+  #video {
+    height: 315px;
+    width: 560px;
+  }
 }
 
 // TILES
@@ -104,6 +112,13 @@ $modal-content-width: 90%;
     margin-top: 100px;
 }
 
+@media (min-width: 700px) {
+  .modal-card {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
 .overflow-hidden {
     overflow-y: hidden !important;
 }
@@ -115,6 +130,8 @@ $modal-content-width: 90%;
 .modal-header img {
     width: 80%;
     max-width: 350px;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 .modal-header {
