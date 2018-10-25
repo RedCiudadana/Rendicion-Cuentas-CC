@@ -28,6 +28,22 @@ export default Route.extend({
       delete item["data"].temporalidad;
       delete item["data"].total;
 
+      // Crea un array con arrays de los datos.
+      // ej:
+      // [["Expedientes ingresado", 100], ...]
+      var items = Object.keys(item["data"]).map(function(key) {
+        return [key, item["data"][key]];
+      });
+
+      // Ordena el array de mayor a menor
+      items.sort(function(first, second) {
+        return second[1] - first[1];
+      });
+
+      // Actualiza item.data con el array ordenado.
+      item.data = items;
+
+      // Agrega a la lista de datos
       listData.push(item);
     }
 
