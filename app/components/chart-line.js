@@ -1,6 +1,8 @@
 import Component from '@ember/component';
 
-export default Component.extend({
+export default Component.extend({}).reopenClass({
+
+  // Configuraciones
   chartOptions: {
     chart: {
       type: 'line',
@@ -29,6 +31,7 @@ export default Component.extend({
     }
   },
 
+  // Datos
   chartData: [
     {
       name: 'Tipo de expediente 1',
@@ -46,22 +49,6 @@ export default Component.extend({
       name: 'Tipo de expediente 4',
       data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
     }
-  ],
-
-  responsive: {
-    rules: [{
-        condition: {
-            maxWidth: 500
-        },
-        chartOptions: {
-            width: 400,
-            legend: {
-                layout: 'horizontal',
-                align: 'center',
-                verticalAlign: 'bottom'
-            }
-        }
-    }]
-  }
+  ]
 
 });
