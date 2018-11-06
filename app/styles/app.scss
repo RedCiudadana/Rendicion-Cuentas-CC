@@ -122,6 +122,10 @@ $modal-content-width: 90%;
 
 .modal-card {
     margin-top: 100px;
+
+    .modal-card-title {
+      padding-right: 10px;
+    }
 }
 
 @media (min-width: 700px) {
@@ -140,7 +144,7 @@ $modal-content-width: 90%;
 }
 
 .modal-header img {
-    width: 80%;
+    width: 50%;
     max-width: 350px;
     margin-left: 3rem;
     margin-right: 3rem;
