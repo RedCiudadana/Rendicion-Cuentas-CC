@@ -27,11 +27,20 @@ acumulado = datos mes acumulado
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <div class="modal-card-title">
-        {{!-- {{#twitter-share-button title="Look at this!" url="http://example.com" hashtags="example" via="example.com"}}
+      <div class="modal-card-title has-text-right">
+        {{#twitter-share-button
+          title="Informe de Rendición de Cuentas Corte de Constitucionalidad"
+          url="https://cc.redciudadana.org"
+          hashtags="PorUnaJusticiaAbierta"
+          via="@RedxGuate"}}
           Tweet
-        {{/twitter-share-button}} --}}
-        {{fa-icon "facebook"}}
+        {{/twitter-share-button}}
+        {{#fb-share-button
+          url="https://cc.redciudadana.org"
+          quote="Informe de Rendición de Cuentas Corte de Constitucionalidad"
+          hashtags="PorUnaJusticiaAbierta"}}
+          Share
+        {{/fb-share-button}}
       </div>
       <button class="delete" aria-label="close"></button>
     </header>
@@ -39,7 +48,7 @@ acumulado = datos mes acumulado
       <div class="content">
         {{!-- header --}}
         {{#bulma-columns class="modal-header is-primary"}}
-          {{#bulma-column is6=true class="has-text-centered"}}
+          {{#bulma-column is5=true class="has-text-centered"}}
             <img src="img/{{resumen.id}}-r.png" alt="">
           {{/bulma-column}}
           {{#bulma-column class="has-text-centered-mobile has-text-left"}}
@@ -51,11 +60,6 @@ acumulado = datos mes acumulado
                 <a href="{{actual.enlaceInforme}}" target="_blank">{{bulma-button label="Descargar informe actual (PDF)" isMedium=true}}</a>
                 <a href="{{actual.enlaceCSV}}" target="_blank">{{bulma-button label="Informe de datos (CSV)" isMedium=true}}</a>
               </div>
-          {{/bulma-column}}
-        {{/bulma-columns}}
-        {{#bulma-columns}}
-          {{#bulma-column}}
-            {{chart-line}}
           {{/bulma-column}}
         {{/bulma-columns}}
         {{!-- data-general --}}
@@ -71,6 +75,11 @@ acumulado = datos mes acumulado
           {{#bulma-column}}
             <h6>Ingresados acumulado</h6>
             {{bulma-tag tag=acumulado.total isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns}}
+          {{#bulma-column}}
+            {{high-charts chartOptions=chartOptions content=chartData}}
           {{/bulma-column}}
         {{/bulma-columns}}
         {{#bulma-columns class="has-text-centered modal-general"}}
