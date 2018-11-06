@@ -1,5 +1,6 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
+import { dasherize } from '@ember/string';
 
 export default Route.extend({
 
@@ -60,6 +61,10 @@ export default Route.extend({
       return this.generateChartDataLines(dict);
     }
 
+    if (type === 'pie') {
+      return this.generateChartDataPie(dict);
+    }
+
     return dict;
 
   },
@@ -76,7 +81,7 @@ export default Route.extend({
 
   generateChartDataLines(dict) {
     // chartData - Line Chart
-    dict['charData'] = [
+    dict['chartData'] = [
       {
         name: 'Ingresados',
         data: [
@@ -131,6 +136,61 @@ export default Route.extend({
     return dict;
   },
 
+  generateChartDataPie(dict) {
+    // chartData - Pie Chart
+    let data = [];
+    // Obteniendo datos de acumulado por tipo
+    for (var i = dict.acumulado.data.length - 1; i >= 0; i--) {
+      data.push({
+        name: this.humanize(dasherize(dict.acumulado.data[i][0])),
+        y: parseInt(dict.acumulado.data[i][1])
+      });
+    }
+
+    dict['chartData'] = [{
+        name: 'Expedientes',
+        colorByPoint: true,
+        innerSize: '50%',
+        data: data
+    }];
+
+    // chartOptions - Pie Chart
+    dict['chartOptions'] = {
+      chart: {
+        type: 'pie',
+      },
+      title: {
+        text: 'Tipo de expedientes',
+        align: 'center',
+        verticalAlign: 'middle',
+        y: 40
+      },
+      plotOptions: {
+          pie: {
+              dataLabels: {
+                  enabled: true,
+                  distance: -50,
+                  style: {
+                      fontWeight: 'bold',
+                      color: 'white'
+                  }
+              },
+              startAngle: -90,
+              endAngle: 90,
+              center: ['50%', '75%'],
+              size: '110%'
+          }
+      }
+    };
+
+    return dict;
+  },
+
+  humanize(string) {
+    let result = string.toLowerCase().replace(/_+|-+/g, ' ');
+    return result.charAt(0).toUpperCase() + result.slice(1);
+  },
+
 
   model() {
     return this.get('spreadsheets').fetch().then((value) => {
@@ -141,7 +201,7 @@ export default Route.extend({
         cc3: this.remodelData(value['cc-3'].elements, 'line'),
         cc4: this.remodelData(value['cc-4'].elements, 'line'),
         cc5: this.remodelData(value['cc-5'].elements, 'line'),
-        cc6: this.remodelData(value['cc-6'].elements, null),
+        cc6: this.remodelData(value['cc-6'].elements, 'pie'),
         cc7: this.remodelData(value['cc-7'].elements, null),
         cc8: this.remodelData(value['cc-8'].elements, null)
       };

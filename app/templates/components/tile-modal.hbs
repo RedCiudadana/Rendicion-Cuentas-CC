@@ -79,7 +79,10 @@ acumulado = datos mes acumulado
         {{/bulma-columns}}
         {{#bulma-columns}}
           {{#bulma-column class="chart-container"}}
-            {{high-charts chartOptions=model.chartOptions content=model.charData}}
+            {{high-charts
+              chartOptions=model.chartOptions
+              content=model.chartData
+            }}
           {{/bulma-column}}
         {{/bulma-columns}}
         {{#bulma-columns class="has-text-centered modal-general"}}
