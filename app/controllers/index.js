@@ -2,6 +2,7 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   chartOptions: {
+    width: 300,
     chart: {
       type: 'line'
     },
@@ -24,14 +25,41 @@ export default Controller.extend({
       align: 'right',
       verticalAlign: 'middle',
       borderWidth: 0
+    },
+    responsive: {
+      rules: [{
+        condition: {
+          maxWidth: 500
+        },
+        chartOptions: {
+          legend: {
+            layout: 'horizontal',
+            align: 'center',
+            verticalAlign: 'bottom'
+          }
+        }
+      }]
     }
   },
 
   chartData: [
     {
-      name: 'Expedientes ingresados',
+      name: 'Ingresados',
       data: [400, 450, 500, 600, 500]
     }
-  ]
+  ],
+
+  responsive: {
+    rules: [{
+      condition: {
+        maxWidth: 300
+      },
+      chartOptions: {
+        legend: {
+          enabled: false
+        }
+      }
+    }]
+  }
 
 });
