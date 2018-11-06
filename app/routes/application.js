@@ -50,8 +50,11 @@ export default Route.extend({
     var dict = {};
 
     for (let i = listData.length - 1; i >= 0; i--) {
-      dict[listData[i].estado] = listData[i];
+      dict[listData[i].informe] = listData[i];
     }
+
+    dict['actual'] = listData.findBy('estado', 'actual');
+    dict['anterior'] = listData.findBy('estado', 'anterior');
 
     return dict;
 
