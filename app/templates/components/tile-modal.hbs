@@ -57,8 +57,8 @@ acumulado = datos mes acumulado
               {{resumen.descripcion}}
             </p>
               <div>
-                <a href="{{actual.enlaceInforme}}" target="_blank">{{bulma-button label="Descargar informe actual (PDF)" isMedium=true}}</a>
-                <a href="{{actual.enlaceCSV}}" target="_blank">{{bulma-button label="Informe de datos (CSV)" isMedium=true}}</a>
+                <a href="{{model.actual.enlaceInforme}}" target="_blank">{{bulma-button label="Descargar informe actual (PDF)" isMedium=true}}</a>
+                <a href="{{model.actual.enlaceCSV}}" target="_blank">{{bulma-button label="Informe de datos (CSV)" isMedium=true}}</a>
               </div>
           {{/bulma-column}}
         {{/bulma-columns}}
@@ -66,15 +66,15 @@ acumulado = datos mes acumulado
         {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
           {{#bulma-column}}
             <h6>Ingresados mes anterior</h6>
-            {{bulma-tag tag=anterior.total isLarge=true}}
+            {{bulma-tag tag=model.anterior.total isLarge=true}}
           {{/bulma-column}}
           {{#bulma-column}}
             <h6>Ingresados mes actual</h6>
-            {{bulma-tag tag=actual.total isLarge=true}}
+            {{bulma-tag tag=model.actual.total isLarge=true}}
           {{/bulma-column}}
           {{#bulma-column}}
             <h6>Ingresados acumulado</h6>
-            {{bulma-tag tag=acumulado.total isLarge=true}}
+            {{bulma-tag tag=model.acumulado.total isLarge=true}}
           {{/bulma-column}}
         {{/bulma-columns}}
         {{#bulma-columns}}
@@ -84,7 +84,7 @@ acumulado = datos mes acumulado
         {{/bulma-columns}}
         {{#bulma-columns class="has-text-centered modal-general"}}
           {{#bulma-column}}
-            <h6>*Actualizado el {{actual.temporalidad}} </h6>
+            <h6>*Actualizado el {{model.actual.temporalidad}} </h6>
           {{/bulma-column}}
         {{/bulma-columns}}
         {{!-- data-tabs --}}
@@ -122,13 +122,13 @@ acumulado = datos mes acumulado
                     <h6>No.</h6>
                   {{/bulma-column}}
                 {{/bulma-columns}}
-                {{#each actual.data as |value|}}
+                {{#each model.actual.data as |value|}}
                   {{#bulma-columns}}
                     {{#bulma-column isTwoThirds=true}}
                       <h6>{{ humanize (dasherize value.firstObject) }}</h6>
                       {{bulma-progress isPrimary=true
                       value=value.lastObject
-                      max=actual.total}}
+                      max=model.actual.total}}
                     {{/bulma-column}}
                     {{#bulma-column}}
                       <h6 class="has-text-centered value">{{value.lastObject}}</h6>
@@ -140,7 +140,7 @@ acumulado = datos mes acumulado
                       <h6>Total</h6>
                     {{/bulma-column}}
                     {{#bulma-column}}
-                    {{bulma-tag tag=actual.total isLarge=true}}
+                    {{bulma-tag tag=model.actual.total isLarge=true}}
                     {{/bulma-column}}
                 {{/bulma-columns}}
               </p>
@@ -153,13 +153,13 @@ acumulado = datos mes acumulado
                     <h6>No.</h6>
                   {{/bulma-column}}
                 {{/bulma-columns}}
-                {{#each anterior.data as |value|}}
+                {{#each model.anterior.data as |value|}}
                   {{#bulma-columns}}
                     {{#bulma-column isTwoThirds=true}}
                       <h6>{{ humanize (dasherize value.firstObject) }}</h6>
                       {{bulma-progress isPrimary=true
                       value=value.lastObject
-                      max=anterior.total}}
+                      max=model.anterior.total}}
                     {{/bulma-column}}
                     {{#bulma-column}}
                       <h6 class="has-text-centered value">{{value.lastObject}}</h6>
@@ -171,7 +171,7 @@ acumulado = datos mes acumulado
                       <h6>Total</h6>
                     {{/bulma-column}}
                     {{#bulma-column}}
-                      {{bulma-tag tag=anterior.total isLarge=true}}
+                      {{bulma-tag tag=model.anterior.total isLarge=true}}
                     {{/bulma-column}}
                 {{/bulma-columns}}
               </p>
@@ -184,13 +184,13 @@ acumulado = datos mes acumulado
                     <h6>No.</h6>
                   {{/bulma-column}}
                 {{/bulma-columns}}
-                {{#each acumulado.data as |value|}}
+                {{#each model.acumulado.data as |value|}}
                   {{#bulma-columns}}
                     {{#bulma-column isTwoThirds=true}}
                       <h6>{{ humanize (dasherize value.firstObject) }}</h6>
                       {{bulma-progress isPrimary=true
                       value=value.lastObject
-                      max=acumulado.total}}
+                      max=model.acumulado.total}}
                     {{/bulma-column}}
                     {{#bulma-column}}
                       <h6 class="has-text-centered value">{{value.lastObject}}</h6>
@@ -202,7 +202,7 @@ acumulado = datos mes acumulado
                       <h6>Total</h6>
                     {{/bulma-column}}
                     {{#bulma-column}}
-                      {{bulma-tag tag=acumulado.total isLarge=true}}
+                      {{bulma-tag tag=model.acumulado.total isLarge=true}}
                     {{/bulma-column}}
                 {{/bulma-columns}}
               </p>
