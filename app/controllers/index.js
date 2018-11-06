@@ -1,8 +1,7 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-  chartOptions: {
-    width: 300,
+  lineChartOptions: {
     chart: {
       type: 'line'
     },
