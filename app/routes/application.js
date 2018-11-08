@@ -139,6 +139,10 @@ export default Route.extend({
   generateChartDataPie(dict) {
     // chartData - Pie Chart
     let data = [];
+    // Ordena el array de mayor a menor
+    dict.acumulado.data.sort(function(first, second) {
+      return second[1] - first[1];
+    });
     // Obteniendo datos de acumulado por tipo
     for (var i = dict.acumulado.data.length - 1; i >= 0; i--) {
       data.push({
@@ -203,7 +207,7 @@ export default Route.extend({
         cc5: this.remodelData(value['cc-5'].elements, 'line'),
         cc6: this.remodelData(value['cc-6'].elements, 'pie'),
         cc7: this.remodelData(value['cc-7'].elements, null),
-        cc8: this.remodelData(value['cc-8'].elements, null)
+        cc8: this.remodelData(value['cc-8'].elements, 'pie')
       };
     });
   }
