@@ -95,7 +95,7 @@ export default Route.extend({
     // chartOptions Line Chart
     dict['chartOptions'] = {
       chart: {
-        type: 'line'
+        type: 'bar'
       },
       title: {
         text: 'Número de expedientes ingresados'
@@ -194,7 +194,6 @@ export default Route.extend({
     let result = string.toLowerCase().replace(/_+|-+/g, ' ');
     return result.charAt(0).toUpperCase() + result.slice(1);
   },
-
 
   model() {
     return this.get('spreadsheets').fetch().then((value) => {
