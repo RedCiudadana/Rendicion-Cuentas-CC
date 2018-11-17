@@ -1,0 +1,221 @@
+{{!-- Parameters --}}
+{{!-- 
+resumen = datos descriptivos
+actual = datos mes actual
+anterior = datos mes anterios
+acumulado = datos mes acumulado
+
+ --}}
+{{!-- Tile --}}
+<div class="tile is-parent modal-button" data-target="{{resumen.id}}" aria-haspopup="true">
+  <article class="tile is-child notification has-background-grey has-text-centered">
+    <div class="content">
+      <figure class="image is-128x128">
+        <img src="img/{{resumen.id}}.png">
+      </figure>
+      <div class="content">
+        <p class="has-text-grey-light">{{resumen.eje}}</p>
+      </div>
+    </div>
+  </article>
+  <div class="overlay">
+    <div class="text">{{resumen.descripcion}}</div>
+  </div>
+</div>
+{{!-- Modal --}}
+<div id="{{resumen.id}}" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <div class="modal-card-title has-text-right">
+        {{#twitter-share-button
+          title="Informe de Rendición de Cuentas Corte de Constitucionalidad"
+          url="https://cc.redciudadana.org"
+          hashtags="PorUnaJusticiaAbierta"
+          via="@RedxGuate"}}
+          Tweet
+        {{/twitter-share-button}}
+        {{#fb-share-button
+          url="https://cc.redciudadana.org"
+          quote="Informe de Rendición de Cuentas Corte de Constitucionalidad"
+          hashtags="PorUnaJusticiaAbierta"}}
+          Share
+        {{/fb-share-button}}
+      </div>
+      <button class="delete" aria-label="close"></button>
+    </header>
+    <section class="modal-card-body">
+      <div class="content">
+        {{!-- header --}}
+        {{#bulma-columns class="modal-header is-primary"}}
+          {{#bulma-column is5=true class="has-text-centered"}}
+            <img src="img/{{resumen.id}}-r.png" alt="">
+          {{/bulma-column}}
+          {{#bulma-column class="has-text-centered-mobile has-text-left"}}
+            <h4 class="title">{{humanize resumen.eje}}</h4>
+            <p><strong>Descripción:</strong><br>
+              {{resumen.descripcion}}
+            </p>
+              <div>
+                <a href="{{model.actual.enlaceInforme}}" target="_blank">{{bulma-button label="Descargar informe actual (PDF)" isMedium=true}}</a>
+                <a href="{{model.actual.enlaceCSV}}" target="_blank">{{bulma-button label="Informe de datos (CSV)" isMedium=true}}</a>
+              </div>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-general --}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Ingresados mes anterior</h6>
+            {{bulma-tag tag=model.anterior.total isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados mes actual</h6>
+            {{bulma-tag tag=model.actual.total isLarge=true}}
+          {{/bulma-column}}
+          {{#bulma-column}}
+            <h6>Ingresados acumulado</h6>
+            {{bulma-tag tag=model.acumulado.total isLarge=true}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns}}
+          {{#bulma-column class="chart-container"}}
+            {{#each chart as |data|}}
+              {{high-charts
+                chartOptions=data.chartOptions
+                content=data.chartData
+              }}
+            {{/each}}
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="has-text-centered modal-general"}}
+          {{#bulma-column}}
+            <h6>*Actualizado del {{model.actual.temporalidad}}</h6>
+          {{/bulma-column}}
+        {{/bulma-columns}}
+        {{!-- data-tabs --}}
+        {{#bulma-columns class="modal-data"}}
+          {{#bulma-column}}
+            <div class="tabs is-fullwidth" id="tabs">
+              <ul>
+                <li class="is-active" data-tab="1">
+                  <a>
+                    {{!-- 4 --}}
+                    <span>Mes actual</span>
+                  </a>
+                </li>
+                <li data-tab="2">
+                  <a>
+                    {{!-- 3 --}}
+                    <span>Mes anterior</span>
+                  </a>
+                </li>
+                <li data-tab="3">
+                  <a>
+                    {{!-- 0 --}}
+                    <span>Acumulado</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="tab-content">
+              <p class="is-active" data-content="1">
+                {{#bulma-columns}}
+                  {{#bulma-column isTwoThirds=true}}
+                    <h6>Número de personas atendidas pertenecientes a un grupo en situación de vulnerabilidad</h6>
+                  {{/bulma-column}}
+                  {{#bulma-column}}
+                    <h6>No.</h6>
+                  {{/bulma-column}}
+                {{/bulma-columns}}
+                {{#each model.actual.data as |value|}}
+                  {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>{{ humanize (dasherize value.firstObject) }}</h6>
+                      {{bulma-progress isPrimary=true
+                      value=value.lastObject
+                      max=model.actual.total}}
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                      <h6 class="has-text-centered value">{{value.lastObject}}</h6>
+                    {{/bulma-column}}
+                  {{/bulma-columns}}
+                {{/each}}
+                {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>Total</h6>
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                    {{bulma-tag tag=model.actual.total isLarge=true}}
+                    {{/bulma-column}}
+                {{/bulma-columns}}
+              </p>
+              <p data-content="2">
+                {{#bulma-columns}}
+                  {{#bulma-column isTwoThirds=true}}
+                    <h6>Número de personas atendidas pertenecientes a un grupo en situación de vulnerabilidad</h6>
+                  {{/bulma-column}}
+                  {{#bulma-column}}
+                    <h6>No.</h6>
+                  {{/bulma-column}}
+                {{/bulma-columns}}
+                {{#each model.anterior.data as |value|}}
+                  {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>{{ humanize (dasherize value.firstObject) }}</h6>
+                      {{bulma-progress isPrimary=true
+                      value=value.lastObject
+                      max=model.anterior.total}}
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                      <h6 class="has-text-centered value">{{value.lastObject}}</h6>
+                    {{/bulma-column}}
+                  {{/bulma-columns}}
+                {{/each}}
+                {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>Total</h6>
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                      {{bulma-tag tag=model.anterior.total isLarge=true}}
+                    {{/bulma-column}}
+                {{/bulma-columns}}
+              </p>
+              <p data-content="3">
+                {{#bulma-columns}}
+                  {{#bulma-column isTwoThirds=true}}
+                    <h6>Número de personas atendidas pertenecientes a un grupo en situación de vulnerabilidad</h6>
+                  {{/bulma-column}}
+                  {{#bulma-column}}
+                    <h6>No.</h6>
+                  {{/bulma-column}}
+                {{/bulma-columns}}
+                {{#each model.acumulado.data as |value|}}
+                  {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>{{ humanize (dasherize value.firstObject) }}</h6>
+                      {{bulma-progress isPrimary=true
+                      value=value.lastObject
+                      max=model.acumulado.total}}
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                      <h6 class="has-text-centered value">{{value.lastObject}}</h6>
+                    {{/bulma-column}}
+                  {{/bulma-columns}}
+                {{/each}}
+                {{#bulma-columns}}
+                    {{#bulma-column isTwoThirds=true}}
+                      <h6>Total</h6>
+                    {{/bulma-column}}
+                    {{#bulma-column}}
+                      {{bulma-tag tag=model.acumulado.total isLarge=true}}
+                    {{/bulma-column}}
+                {{/bulma-columns}}
+              </p>
+            </div>
+
+          {{/bulma-column}}
+        {{/bulma-columns}}
+      </div>
+    </section>
+  </div>
+</div>

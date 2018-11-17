@@ -455,6 +455,171 @@ var magistratura6 = {
   }
 };
 
+var gacela1 = {
+  // chartData - Pie Chart
+  chartData : [{
+      name: 'Sentencias',
+      colorByPoint: true,
+      data: [
+      {
+        name: 'Sentencias cargadas en el sistema',
+        y: 155
+      },
+      {
+        name: 'Sentencias publicadas en el sistema',
+        y: 141
+      }
+      ]
+  }],
+
+  // chartOptions - Pie Chart
+  chartOptions : {
+    chart: {
+      type: 'pie',
+    },
+    title: {
+      text: 'Unidad de Jurisprudencia y Gaceta',
+      align: 'center',
+      verticalAlign: 'top',
+      y: 10
+    },
+    plotOptions: {
+        pie: {
+            dataLabels: {
+                enabled: true,
+                distance: 20,
+                style: {
+                    fontWeight: 'bold',
+                    color: 'white'
+                }
+            },
+            startAngle: 0,
+            endAngle: 360,
+            center: ['50%', '50%'],
+            size: '80%'
+        }
+    }
+  }
+};
+
+var gacela2 = {
+  // chartData - Pie Chart
+  chartData : [{
+      name: '',
+      colorByPoint: true,
+      data: [
+      {
+        name: 'Presidencia',
+        y: 17
+      },
+      {
+        name: 'Mag. I',
+        y: 44
+      },
+      {
+        name: 'Mag. II',
+        y: 36
+      },
+      {
+        name: 'Mag. III',
+        y: 29
+      },
+      {
+        name: 'Mag. IV',
+        y: 22
+      }
+      ]
+  }],
+
+  // chartOptions - Pie Chart
+  chartOptions : {
+    chart: {
+      type: 'pie',
+    },
+    title: {
+      text: 'Magistratura ponente',
+      align: 'center',
+      verticalAlign: 'top',
+      y: 10
+    },
+    plotOptions: {
+        pie: {
+            dataLabels: {
+                enabled: true,
+                distance: 20,
+                style: {
+                    fontWeight: 'bold',
+                    color: 'white'
+                }
+            },
+            startAngle: 0,
+            endAngle: 360,
+            center: ['50%', '50%'],
+            size: '80%'
+        }
+    }
+  }
+};
+
+var gacela3 = {
+  // chartData - Pie Chart
+  chartData : [{
+      name: 'Expedientes',
+      colorByPoint: true,
+      data: [
+      {
+        name: 'Persona jurídica',
+        y: 65
+      },
+      {
+        name: 'Hombre',
+        y: 50
+      },
+      {
+        name: 'Mujer',
+        y: 30
+      },
+      {
+        name: 'Mayor',
+        y: 0
+      },
+      {
+        name: 'Mixto',
+        y: 3
+      }
+      ]
+  }],
+
+  // chartOptions - Pie Chart
+  chartOptions : {
+    chart: {
+      type: 'pie',
+    },
+    title: {
+      text: 'Accionante',
+      align: 'center',
+      verticalAlign: 'top',
+      y: 10
+    },
+    plotOptions: {
+        pie: {
+            dataLabels: {
+                enabled: true,
+                distance: 20,
+                style: {
+                    fontWeight: 'bold',
+                    color: 'white'
+                }
+            },
+            startAngle: 0,
+            endAngle: 360,
+            center: ['50%', '50%'],
+            size: '80%'
+        }
+    }
+  }
+};
+
 export default Route.extend({
 
   spreadsheets: service(),
@@ -465,6 +630,9 @@ export default Route.extend({
   magistratura4,
   magistratura5,
   magistratura6,
+  gacela1,
+  gacela2,
+  gacela3,
 
   // Agrega 'data' al diccionaro que contiene los datos para mostrar en tablas.
   remodelData(data, type='line') {
@@ -628,7 +796,7 @@ export default Route.extend({
         text: '',
         align: 'center',
         verticalAlign: 'middle',
-        y: 40
+        y: 0
       },
       plotOptions: {
           pie: {
@@ -642,8 +810,8 @@ export default Route.extend({
               },
               startAngle: 0,
               endAngle: 360,
-              center: ['50%', '75%'],
-              size: '110%'
+              center: ['50%', '50%'],
+              size: '80%'
           }
       }
     };
@@ -667,6 +835,7 @@ export default Route.extend({
         cc4: this.remodelData(value['cc-4'].elements, 'line'),
         cc5: this.remodelData(value['cc-5'].elements, 'line'),
         cc6: this.remodelData(value['cc-6'].elements, 'pie'),
+        cc6chart: [gacela1, gacela2, gacela3],
         cc7: this.remodelData(value['cc-7'].elements, null),
         cc8: this.remodelData(value['cc-8'].elements, 'pie')
       };

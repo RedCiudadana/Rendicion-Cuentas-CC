@@ -19,7 +19,7 @@
   {{!-- Section of modals --}}
   {{#bulma-section class="has-text-centered modals"}}
     {{#bulma-container}}
-      <h1 class="has-text-grey-light title is-6">Haz clic en los iconos para conocer el detalle del trabajo</h1>
+      <h1 class="has-text-grey-light title is-6">Haz clic en los íconos para conocer el detalle del trabajo</h1>
       {{!-- row 1 --}}
       <div class="tile is-ancestor">
         {{!-- 1 --}}
@@ -46,9 +46,10 @@
           resumen=model.resumen.cc-5
           model=model.cc5}}
         {{!-- 6 --}}
-        {{tile-modal
+        {{gacela-modal
           resumen=model.resumen.cc-6
-          model=model.cc6}}
+          model=model.cc6
+          chart=model.cc6chart}}
         {{!-- 7 --}}
         {{!-- {{tile-modal
           resumen=model.resumen.cc-7
