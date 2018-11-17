@@ -6,7 +6,7 @@ var magistratura1 = {
   // chartData - Line Chart
   chartData : [
     {
-      name: '',
+      name: 'Expedientes asignados',
       data: [
         1,
         2,
@@ -28,7 +28,7 @@ var magistratura1 = {
       type: 'bar'
     },
     title: {
-      text: 'Expedientes asiganados a Magistratura I'
+      text: 'Expedientes asignados a Magistratura I'
     },
     xAxis: {
       categories: [
@@ -51,7 +51,7 @@ var magistratura1 = {
       }
     },
     tooltip: {
-      valueSuffix: ' expedientes'
+      valueSuffix: ' expedientes asigandos'
     },
     legend: {
       layout: 'vertical',
@@ -80,7 +80,7 @@ var magistratura2 = {
   // chartData - Line Chart
   chartData : [
     {
-      name: '',
+      name: 'Expedientes asignados',
       data: [
         1,
         2,
@@ -102,7 +102,7 @@ var magistratura2 = {
       type: 'bar'
     },
     title: {
-      text: 'Expedientes asiganados a Magistratura II'
+      text: 'Expedientes asignados a Magistratura II'
     },
     xAxis: {
       categories: [
@@ -153,7 +153,7 @@ var magistratura3 = {
   // chartData - Line Chart
   chartData : [
     {
-      name: '',
+      name: 'Expedientes asignados',
       data: [
         2,
         13,
@@ -175,7 +175,7 @@ var magistratura3 = {
       type: 'bar'
     },
     title: {
-      text: 'Expedientes asiganados a Magistratura III'
+      text: 'Expedientes asignados a Magistratura III'
     },
     xAxis: {
       categories: [
@@ -227,7 +227,7 @@ var magistratura4 = {
   // chartData - Line Chart
   chartData : [
     {
-      name: '',
+      name: 'Expedientes asignados',
       data: [
         2,
         2,
@@ -251,7 +251,7 @@ var magistratura4 = {
       type: 'bar'
     },
     title: {
-      text: 'Expedientes asiganados a Magistratura IV'
+      text: 'Expedientes asignados a Magistratura IV'
     },
     xAxis: {
       categories: [
@@ -305,7 +305,7 @@ var magistratura5 = {
   // chartData - Line Chart
   chartData : [
     {
-      name: '',
+      name: 'Expedientes asignados',
       data: [
         73,
         109,
@@ -377,7 +377,7 @@ var magistratura6 = {
   // chartData - Line Chart
   chartData : [
     {
-      name: '',
+      name: 'Expedientes asignados',
       data: [
         2,
         155,
@@ -505,7 +505,7 @@ var gacela1 = {
 var gacela2 = {
   // chartData - Pie Chart
   chartData : [{
-      name: '',
+      name: 'Expedientes asignados',
       colorByPoint: true,
       data: [
       {
