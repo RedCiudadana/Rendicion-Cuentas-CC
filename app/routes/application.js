@@ -580,10 +580,6 @@ var gacela3 = {
         y: 30
       },
       {
-        name: 'Mayor',
-        y: 0
-      },
-      {
         name: 'Mixto',
         y: 3
       }
