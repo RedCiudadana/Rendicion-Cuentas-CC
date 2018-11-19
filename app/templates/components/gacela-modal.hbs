@@ -65,15 +65,20 @@ acumulado = datos mes acumulado
         {{!-- data-general --}}
         {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
           {{#bulma-column}}
-            <h6>Ingresados mes anterior</h6>
+            <h5>Número de personas atendidas pertenecientes a un grupo en situación de vulnerabilidad</h5>
+          {{#bulma-column}}
+        {{/bulma-columns}}
+        {{#bulma-columns class="modal-general has-text-centered has-background-grey-lighter"}}
+          {{#bulma-column}}
+            <h6>Mes anterior</h6>
             {{bulma-tag tag=model.anterior.total isLarge=true}}
           {{/bulma-column}}
           {{#bulma-column}}
-            <h6>Ingresados mes actual</h6>
+            <h6>Mes actual</h6>
             {{bulma-tag tag=model.actual.total isLarge=true}}
           {{/bulma-column}}
           {{#bulma-column}}
-            <h6>Ingresados acumulado</h6>
+            <h6>Acumulado</h6>
             {{bulma-tag tag=model.acumulado.total isLarge=true}}
           {{/bulma-column}}
         {{/bulma-columns}}
