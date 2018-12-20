@@ -9,16 +9,19 @@ var magistratura1 = {
       name: 'Expedientes asignados',
       data: [
         1,
+        22,
+        1,
+        1,
+        30,
+        21,
+        1,
+        54,
         2,
-        9,
-        221,
-        226,
-        119,
-        554,
+        3,
+        10,
         2,
-        2,
-        2,
-        138
+        1,
+        149
       ]
     }
   ],
@@ -33,15 +36,18 @@ var magistratura1 = {
     xAxis: {
       categories: [
         'AMPARO',
-        'AMPARO VERBAL',
-        'OCURSO DE QUEJA',
         'AMPARO EN ÚNICA INSTANCIA',
+        'AMPARO VERBAL',
+        'APELACION DE AUTO DE LIQUIDACIÓN DE COSTAS',
         'APELACIÓN DE AUTO EN AMPARO',
         'APELACIÓN DE AUTO POR SUSPENSION',
-        'APELACIÓN DE SENTENCIA EN AMPARO',
-        'APELACIÓN DE AUTO DE LIQUIDACIÓN DE COSTAS',
-        'INCONSTITUCIONALIDAD DE LEY DE CARÁCTER GENERAL',
         'APELACIÓN DE INCONSTITUCIONALIDAD DE LEY EN CASO CONCRETO',
+        'APELACIÓN DE SENTENCIA EN AMPARO',
+        'DUDA DE COMPETENCIA',
+        'INCONSTITUCIONALIDAD DE LEY DE CARÁCTER GENERAL',
+        'OCURSO DE QUEJA',
+        'PLANTEAMIENTO DE ERROR SUBSTANCIAL EN EL PROCEDIMIENTO',
+        'SOLICITUD INNOMINADA',
         'TOTAL'
       ]
     },
@@ -83,16 +89,19 @@ var magistratura2 = {
       name: 'Expedientes asignados',
       data: [
         1,
-        2,
-        5,
-        21,
-        26,
-        19,
-        50,
-        2,
+        25,
         1,
-        3,
-        130
+        2,
+        28,
+        20,
+        2,
+        54,
+        1,
+        6,
+        2,
+        9,
+        1,
+        152
       ]
     }
   ],
@@ -107,15 +116,19 @@ var magistratura2 = {
     xAxis: {
       categories: [
         'AMPARO',
-        'AMPARO VERBAL',
-        'OCURSO DE QUEJA',
         'AMPARO EN ÚNICA INSTANCIA',
+        'AMPARO VERBAL',
+        'APELACION DE AUTO DE LIQUIDACIÓN DE COSTAS',
         'APELACIÓN DE AUTO EN AMPARO',
         'APELACIÓN DE AUTO POR SUSPENSION',
+        'APELACIÓN DE INCONSTITUCIONALIDAD DE LEY EN CASO CONCRETO',
         'APELACIÓN DE SENTENCIA EN AMPARO',
-        'APELACIÓN DE AUTO DE LIQUIDACIÓN DE COSTAS',
+        'DUDA DE COMPETENCIA',
+        'INCONSTITUCIONALIDAD DE LEY DE CARÁCTER GENERAL',
+        'OCURSO DE HECHO',
+        'OCURSO DE QUEJA',
         'PLANTEAMIENTO DE ERROR SUBSTANCIAL EN EL PROCEDIMIENTO',
-        'APELACIÓN DE INCONSTITUCIONALIDAD DE LEY EN CASO CONCRETO'
+        'TOTAL'
       ]
     },
     yAxis: {
@@ -155,17 +168,16 @@ var magistratura3 = {
     {
       name: 'Expedientes asignados',
       data: [
-        2,
-        13,
         1,
-        21,
         27,
-        22,
-        64,
         1,
-        2,
+        29,
+        20,
+        4,
+        50,
         3,
-        156
+        9,
+        144
       ]
     }
   ],
@@ -179,16 +191,15 @@ var magistratura3 = {
     },
     xAxis: {
       categories: [
-        'AMPARO VERBAL',
-        'OCURSO DE QUEJA',
-        'DUDA DE COMPETENCIA',
+        'AMPARO',
         'AMPARO EN ÚNICA INSTANCIA',
+        'AMPARO VERBAL',
         'APELACIÓN DE AUTO EN AMPARO',
         'APELACIÓN DE AUTO POR SUSPENSION',
+        'APELACIÓN DE INCONSTITUCIONALIDAD DE LEY EN CASO CONCRETO',
         'APELACIÓN DE SENTENCIA EN AMPARO',
-        'APELACIÓN DE AUTO DE LIQUIDACIÓN DE COSTAS',
         'INCONSTITUCIONALIDAD DE LEY DE CARÁCTER GENERAL',
-        'PLANTEAMIENTO DE ERROR SUBSTANCIAL EN EL PROCEDIMIENTO',
+        'OCURSO DE QUEJA',
         'TOTAL'
       ]
     },
@@ -229,19 +240,17 @@ var magistratura4 = {
     {
       name: 'Expedientes asignados',
       data: [
-        2,
-        2,
+        23,
+        1,
+        1,
+        31,
+        19,
+        1,
+        50,
+        3,
         11,
         1,
-        1,
-        23,
-        27,
-        19,
-        49,
-        2,
-        1,
-        1,
-        139
+        141
       ]
     }
   ],
@@ -255,18 +264,16 @@ var magistratura4 = {
     },
     xAxis: {
       categories: [
-        'AMPARO',
-        'AMPARO VERBAL',
-        'OCURSO DE QUEJA',
-        'DUDA DE COMPETENCIA',
-        'SOLICITUD INNOMINADA',
         'AMPARO EN ÚNICA INSTANCIA',
+        'AMPARO VERBAL',
+        'APELACION DE AUTO DE LIQUIDACIÓN DE COSTAS',
         'APELACIÓN DE AUTO EN AMPARO',
         'APELACIÓN DE AUTO POR SUSPENSION',
+        'APELACIÓN DE INCONSTITUCIONALIDAD DE LEY EN CASO CONCRETO',
         'APELACIÓN DE SENTENCIA EN AMPARO',
         'INCONSTITUCIONALIDAD DE LEY DE CARÁCTER GENERAL',
+        'OCURSO DE QUEJA',
         'PLANTEAMIENTO DE ERROR SUBSTANCIAL EN EL PROCEDIMIENTO',
-        'APELACIÓN DE INCONSTITUCIONALIDAD DE LEY EN CASO CONCRETO',
         'TOTAL'
       ]
     },
@@ -307,16 +314,16 @@ var magistratura5 = {
     {
       name: 'Expedientes asignados',
       data: [
-        73,
-        109,
-        82,
-        4,
-        172,
-        7,
-        51,
+        101,
+        5,
+        127,
+        91,
         13,
-        2,
-        513
+        297,
+        8,
+        39,
+        5,
+        686
       ]
     }
   ],
@@ -331,6 +338,7 @@ var magistratura5 = {
     xAxis: {
       categories: [
         'AMPARO EN ÚNICA INSTANCIA',
+        'APELACION DE AUTO DE LIQUIDACIÓN DE COSTAS',
         'APELACIÓN DE AUTO EN AMPARO',
         'APELACIÓN DE AUTO POR SUSPENSION',
         'APELACIÓN DE INCONSTITUCIONALIDAD DE LEY EN CASO CONCRETO',
@@ -338,8 +346,7 @@ var magistratura5 = {
         'INCONSTITUCIONALIDAD DE LEY DE CARÁCTER GENERAL',
         'OCURSO DE QUEJA',
         'PLANTEAMIENTO DE ERROR SUBSTANCIAL EN EL PROCEDIMIENTO',
-        'SOLICITUD DE ENMIENDA',
-        'TOTAL'
+        'TOTAL',
       ]
     },
     yAxis: {
@@ -379,21 +386,18 @@ var magistratura6 = {
     {
       name: 'Expedientes asignados',
       data: [
-        2,
-        155,
-        10,
-        7,
-        258,
-        124,
-        18,
-        399,
-        14,
-        1,
-        97,
-        16,
+        136,
+        4,
+        109,
+        66,
+        15,
+        308,
         1,
         1,
-        1103
+        4,
+        36,
+        8,
+        688
       ]
     }
   ],
@@ -407,20 +411,16 @@ var magistratura6 = {
     },
     xAxis: {
       categories: [
-        'AMPARO',
         'AMPARO EN ÚNICA INSTANCIA',
-        'AMPARO VERBAL',
-        'APELACIÓN DE AUTO DE LIQUIDACIÓN DE COSTAS',
+        'APELACION DE AUTO DE LIQUIDACIÓN DE COSTAS',
         'APELACIÓN DE AUTO EN AMPARO',
         'APELACIÓN DE AUTO POR SUSPENSION',
         'APELACIÓN DE INCONSTITUCIONALIDAD DE LEY EN CASO CONCRETO',
         'APELACIÓN DE SENTENCIA EN AMPARO',
+        'DUDA DE COMPETENCIA',
         'INCONSTITUCIONALIDAD DE LEY DE CARÁCTER GENERAL',
-        'OCURSO DE HECHO',
         'OCURSO DE QUEJA',
         'PLANTEAMIENTO DE ERROR SUBSTANCIAL EN EL PROCEDIMIENTO',
-        'SOLICITUD DE ENMIENDA',
-        'SOLICITUD INNOMINADA',
         'TOTAL'
       ]
     },
@@ -463,11 +463,11 @@ var gacela1 = {
       data: [
       {
         name: 'Sentencias cargadas en el sistema',
-        y: 155
+        y: 174
       },
       {
         name: 'Sentencias publicadas en el sistema',
-        y: 141
+        y: 266
       }
       ]
   }],
@@ -510,19 +510,19 @@ var gacela2 = {
       data: [
       {
         name: 'Presidencia',
-        y: 17
+        y: 80
       },
       {
         name: 'Mag. I',
-        y: 44
+        y: 59
       },
       {
         name: 'Mag. II',
-        y: 36
+        y: 92
       },
       {
         name: 'Mag. III',
-        y: 29
+        y: 80
       },
       {
         name: 'Mag. IV',
@@ -569,19 +569,19 @@ var gacela3 = {
       data: [
       {
         name: 'Persona jurídica',
-        y: 65
+        y: 118
       },
       {
         name: 'Hombre',
-        y: 50
+        y: 109
       },
       {
         name: 'Mujer',
-        y: 30
+        y: 34
       },
       {
         name: 'Mixto',
-        y: 3
+        y: 5
       }
       ]
   }],
@@ -714,7 +714,8 @@ export default Route.extend({
           parseInt(dict['Tercer Informe'].total),
           parseInt(dict['Cuarto Informe'].total),
           parseInt(dict['Quinto Informe'].total),
-          parseInt(dict['Sexto Informe'].total)
+          parseInt(dict['Sexto Informe'].total),
+          parseInt(dict['Septimo Informe'].total)
         ]
       }
     ];
@@ -727,7 +728,7 @@ export default Route.extend({
         text: 'Número de expedientes ingresados'
       },
       xAxis: {
-        categories: ['Primer Informe', 'Segundo Informe', 'Tercer Informe', 'Cuarto Informe', 'Quinto Informe', 'Sexto Informe']
+        categories: ['Primer Informe', 'Segundo Informe', 'Tercer Informe', 'Cuarto Informe', 'Quinto Informe', 'Sexto Informe', 'Septimo Informe']
       },
       yAxis: {
         title: {
