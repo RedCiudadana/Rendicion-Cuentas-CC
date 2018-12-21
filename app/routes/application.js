@@ -715,7 +715,7 @@ export default Route.extend({
           parseInt(dict['Cuarto Informe'].total),
           parseInt(dict['Quinto Informe'].total),
           parseInt(dict['Sexto Informe'].total),
-          parseInt(dict['Septimo Informe'].total)
+          parseInt(dict['Séptimo Informe'].total)
         ]
       }
     ];
@@ -728,7 +728,7 @@ export default Route.extend({
         text: 'Número de expedientes ingresados'
       },
       xAxis: {
-        categories: ['Primer Informe', 'Segundo Informe', 'Tercer Informe', 'Cuarto Informe', 'Quinto Informe', 'Sexto Informe', 'Septimo Informe']
+        categories: ['Primer Informe', 'Segundo Informe', 'Tercer Informe', 'Cuarto Informe', 'Quinto Informe', 'Sexto Informe', 'Séptimo Informe']
       },
       yAxis: {
         title: {
