@@ -1,4 +1,4 @@
-# Light Documentation
+# Documentación
 
 Ligera documetación del proyecto. 
 
