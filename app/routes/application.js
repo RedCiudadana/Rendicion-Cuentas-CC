@@ -633,6 +633,7 @@ export default Route.extend({
   // Agrega 'data' al diccionaro que contiene los datos para mostrar en tablas.
   remodelData(data, type='line') {
 
+    console.log(data);
     let listData = [];
 
     for (let i = data.length - 1; i >= 0; i--) {
@@ -678,6 +679,7 @@ export default Route.extend({
       dict[listData[i].informe] = listData[i];
     }
 
+    console.log(listData);
     dict['actual'] = listData.findBy('estado', 'actual');
     dict['anterior'] = listData.findBy('estado', 'anterior');
 
@@ -704,7 +706,8 @@ export default Route.extend({
   },
 
   generateChartDataLines(dict) {
-    // chartData - Line Chart
+    // chartData - Line Chart'
+    console.log(dict);
     dict['chartData'] = [
       {
         name: 'Ingresados',
@@ -824,17 +827,17 @@ export default Route.extend({
   model() {
     return this.get('spreadsheets').fetch().then((value) => {
       return {
-        resumen: this.mapByIdDictonary(value['resumen'].elements),
-        cc1: this.remodelData(value['cc-1'].elements, 'line'),
-        cc2: this.remodelData(value['cc-2'].elements, 'line'),
+        resumen: this.mapByIdDictonary(value['resumen']),
+        cc1: this.remodelData(value['cc-1'], 'line'),
+        cc2: this.remodelData(value['cc-2'], 'line'),
         cc2chart: [magistratura1, magistratura2, magistratura3, magistratura4, magistratura5, magistratura6],
-        cc3: this.remodelData(value['cc-3'].elements, 'line'),
-        cc4: this.remodelData(value['cc-4'].elements, 'line'),
-        cc5: this.remodelData(value['cc-5'].elements, 'line'),
-        cc6: this.remodelData(value['cc-6'].elements, 'pie'),
+        cc3: this.remodelData(value['cc-3'], 'line'),
+        cc4: this.remodelData(value['cc-4'], 'line'),
+        cc5: this.remodelData(value['cc-5'], 'line'),
+        cc6: this.remodelData(value['cc-6'], 'pie'),
         cc6chart: [gacela1, gacela2, gacela3],
-        cc7: this.remodelData(value['cc-7'].elements, null),
-        cc8: this.remodelData(value['cc-8'].elements, 'pie')
+        cc7: this.remodelData(value['cc-7'], null),
+        cc8: this.remodelData(value['cc-8'], 'pie')
       };
     });
   }
